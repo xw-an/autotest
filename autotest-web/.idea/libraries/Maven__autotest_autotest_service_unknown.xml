@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: autotest:autotest-service:unknown">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../maven/repository/autotest/autotest-service/unknown/autotest-service-unknown.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../maven/repository/autotest/autotest-service/unknown/autotest-service-unknown-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../maven/repository/autotest/autotest-service/unknown/autotest-service-unknown-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

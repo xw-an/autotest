@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="autotest-web:war exploded">
+    <output-path>$PROJECT_DIR$/target/autotest-web-1.0-SNAPSHOT</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="autotest-web" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: autotest:autotest-core:1.0-SNAPSHOT" />
+          <element id="library" level="project" name="Maven: autotest:autotest-service:unknown" />
+        </element>
+      </element>
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/target/autotest-web-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="javaee-facet-resources" facet="autotest-web/web/Web" />
+    </root>
+  </artifact>
+</component>
