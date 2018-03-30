@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.autotest.core.dao.TestCaseDao">
+    <delete id="delete" parameterType="int">
+        delete from test_case where id=#{id}
+    </delete>
+
+    <update id="update" parameterType="TestCase">
+        update test_case
+        set testScenariosName = #{testScenariosName},
+        testScenariosType = #{testScenariosType},
+        testContent = #{testContent},
+        remark = #{remark},
+        userId = #{userId}
+        where id=#{id}
+    </update>
+
+    <insert id="insert" parameterType="TestCase">
+        insert into test_case(testScenariosName,testScenariosType,testContent,remark,userId,dataChange_CreateTime,dataChange_LastTime)
+        values(#{testScenariosName},#{testScenariosType},#{testContent},#{remark},#{userId},now(),now());
+    </insert>
+
+    <select id="select" parameterType="int" resultType="TestCase">
+        SELECT * FROM test_case where id=#{id}
+    </select>
+
+    <select id="selectList" parameterType="Map" resultType="TestCase">
+        SELECT * FROM test_case
+        <where>
+            <if test="parameters!=null" >
+
+            </if>
+        </where>
+    </select>
+</mapper>

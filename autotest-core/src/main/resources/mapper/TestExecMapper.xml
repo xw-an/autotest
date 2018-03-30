@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.autotest.core.dao.TestExecDao">
+    <delete id="delete" parameterType="int">
+        delete from test_exec where case_id=#{caseId}
+    </delete>
+
+    <update id="update" parameterType="TestExec">
+        update test_exec
+        set actionType = #{actionType},
+        keyName = #{keyName}
+        where id=#{id}
+    </update>
+
+    <insert id="insert" parameterType="TestExec">
+        insert into test_exec(actionType,keyName,dataChange_CreateTime,dataChange_LastTime)
+        values(#{actionType},#{keyName},now(),now());
+    </insert>
+
+    <select id="select" parameterType="int" resultType="TestExec">
+        SELECT * FROM test_exec where id=#{id}
+    </select>
+
+    <select id="selectList" parameterType="Map" resultType="TestExec">
+        select * from test_exec where case_id=#{caseId} and step_id=#{stepId};
+    </select>
+</mapper>
