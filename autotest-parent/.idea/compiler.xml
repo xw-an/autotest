@@ -8,12 +8,14 @@
         <outputRelativeToContentRoot value="true" />
         <module name="autotest-core" />
         <module name="autotest-service" />
+        <module name="autotest-web" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="autotest-core" target="1.8" />
       <module name="autotest-parent" target="1.8" />
       <module name="autotest-service" target="1.8" />
+      <module name="autotest-web" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

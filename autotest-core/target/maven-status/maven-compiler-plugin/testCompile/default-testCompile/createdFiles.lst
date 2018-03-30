@@ -1,5 +1,0 @@
-com\autotest\test\TestDao.class
-com\autotest\tools\ReflectBean_mysql.class
-com\autotest\tools\ReflectBean_sqlserver.class
-com\autotest\tools\ReflectClass.class
-com\autotest\tools\ReflectClass_mysql.class

@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/../autotest-core/autotest-core.iml" filepath="$PROJECT_DIR$/../autotest-core/autotest-core.iml" />
       <module fileurl="file://$PROJECT_DIR$/autotest-parent.iml" filepath="$PROJECT_DIR$/autotest-parent.iml" />
       <module fileurl="file://$PROJECT_DIR$/../autotest-service/autotest-service.iml" filepath="$PROJECT_DIR$/../autotest-service/autotest-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../autotest-web/autotest-web.iml" filepath="$PROJECT_DIR$/../autotest-web/autotest-web.iml" />
     </modules>
   </component>
 </project>

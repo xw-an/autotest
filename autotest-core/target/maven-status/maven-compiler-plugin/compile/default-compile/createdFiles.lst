@@ -1,9 +1,12 @@
+com\autotest\core\model\TestStepExec.class
 com\autotest\core\model\TestStep.class
 com\autotest\core\dao\ITestCase.class
 com\autotest\core\dao\TestCaseDao.class
 com\autotest\core\dao\ITestExec.class
 com\autotest\core\dao\ITestAction.class
+com\autotest\core\model\TestSuit.class
 com\autotest\core\model\TestCase.class
+com\autotest\core\util\SystemParametersUtil.class
 com\autotest\core\dao\TestStepDao.class
 com\autotest\core\aspect\DataSourceAspect.class
 com\autotest\core\dao\BaseDao.class
@@ -12,9 +15,9 @@ com\autotest\core\dao\TestExecDao.class
 com\autotest\core\dao\ITestStep.class
 com\autotest\core\util\DynamicDataSource.class
 com\autotest\core\annotation\DataSource.class
-com\autotest\core\model\SystemParameter.class
 com\autotest\core\dao\TestActionDao.class
 com\autotest\core\model\DynamicDataSourceHolder.class
 com\autotest\core\model\FailException.class
+com\autotest\core\model\SystemParameters.class
 com\autotest\core\model\TestAction.class
 com\autotest\core\util\HttpClient.class
