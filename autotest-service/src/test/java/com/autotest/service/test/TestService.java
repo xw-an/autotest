@@ -1,11 +1,15 @@
 package com.autotest.service.test;
 
+import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.autotest.core.model.SystemParameters;
+import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestSuit;
 import com.autotest.core.util.HttpClient;
 import com.autotest.core.util.SystemParametersUtil;
 import com.autotest.service.bussiness.ITestActionService;
+import com.autotest.service.bussiness.ITestCaseService;
+import com.autotest.service.bussiness.ITestStepExecService;
 import com.autotest.service.bussiness.ITestSuitService;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,6 +35,10 @@ public class TestService {
     private ITestActionService taservice;
     @Autowired
     private ITestSuitService tSuitService;
+    @Autowired
+    private ITestStepExecService tStepExecService;
+    @Autowired
+    private ITestCaseService tCaseService;
 
     @Test
     public void testActionService(){
@@ -165,5 +173,31 @@ public class TestService {
         //Expression exp2 = parse.parseExpression("#resJson.get(\"idCard\")");
         // 3. 获取结果
         System.out.println(exp.getValue(context));
+    }
+
+    @Test
+    public void testStepService(){
+        //System.out.println(tStepExecService.selectStepExec(1));
+        List<JSONObject> l=new ArrayList<>();
+        JSONObject jsonObject1=new JSONObject();
+        jsonObject1.put("id","1");
+        jsonObject1.put("name","张三");
+        JSONObject jsonObject2=new JSONObject();
+        jsonObject2.put("id","2");
+        jsonObject2.put("name","里斯");
+        l.add(jsonObject1);
+        l.add(jsonObject2);
+        System.out.println(JSON.toJSONString(l));
+    }
+
+    @Test
+    public void testCaseService(){
+        TestCase tCase=new TestCase();
+        tCase.setTestScenariosName("123");
+        tCase.setTestScenariosType("123");
+        tCase.setTestContent("123");
+        tCase.setRemark("123");
+        tCase.setUserId("HQ");
+        tCaseService.addCase(tCase);
     }
 }

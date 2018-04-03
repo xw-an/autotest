@@ -6,7 +6,108 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09d57465-ddaf-42b2-b37a-04049f136b92" name="Default" comment="" />
+    <list default="true" id="09d57465-ddaf-42b2-b37a-04049f136b92" name="Default" comment="添加mvc配置文件">
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/mybatis-config.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ar.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.az.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.bg.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.bn.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ca.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.cs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.da.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.de.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ee.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.el.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.fi.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.he.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.hr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.hu.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.hy.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.id.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.is.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.it.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ja.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ka.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ko.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.lt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.lv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ms.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.nb.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.nl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.no.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.pl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.pt-BR.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.pt.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ro.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.rs-latin.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.rs.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ru.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sl.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sv.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sw.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.th.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.tr.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ua.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.uk.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-TW.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/less/datetimepicker.less" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.min.css.map" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/bootstrap.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/bootstrap.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/npm.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-editable.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-editable.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table-editable.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table-zh-CN.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.min.css" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery-3.2.1.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery-3.2.1.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery.validate.min.js" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/messages_zh.js" />
+      <change beforePath="$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties" />
+      <change beforePath="$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties" />
+      <change beforePath="$PROJECT_DIR$/../autotest-core/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/../autotest-core/target/classes/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../autotest-core/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/../autotest-core/target/classes/jdbc.properties" />
+      <change beforePath="$PROJECT_DIR$/../autotest-core/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/../autotest-core/target/classes/log4j.properties" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java" afterPath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java" />
+      <change beforePath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java" afterPath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java" />
+      <change beforePath="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/Test.xml" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" afterPath="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" />
+      <change beforePath="$PROJECT_DIR$/../autotest-service/target/classes/com/autotest/service/bussiness/TestActionService.class" afterPath="$PROJECT_DIR$/../autotest-service/target/classes/com/autotest/service/bussiness/TestActionService.class" />
+      <change beforePath="$PROJECT_DIR$/../autotest-service/target/test-classes/com/autotest/service/test/TestService.class" afterPath="$PROJECT_DIR$/../autotest-service/target/test-classes/com/autotest/service/test/TestService.class" />
+      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" afterPath="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" />
+      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" />
+      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml" />
+      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties" />
+      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties" />
+      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" />
+    </list>
     <ignored path="$PROJECT_DIR$/../autotest-web/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/../autotest-service/target/" />
@@ -37,26 +138,33 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestCaseController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestCaseController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="352">
-              <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#388#389#0" expanded="true" />
-                <element signature="e#427#428#0" expanded="true" />
-              </folding>
+              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaseManage.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp">
+      <file leaf-file-name="TestCaseManage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="120">
+              <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
+              <folding>
+                <element signature="e#105#1803#0" expanded="false" />
+                <element signature="n#!!block;n#caseOperateFormatter#0" expanded="false" />
+                <element signature="n#!!block;n#stepDetailTable#0" expanded="false" />
+                <element signature="n#!!block;n#showAddCase#0" expanded="false" />
+                <element signature="n#!!block;n#addCase#0" expanded="false" />
+                <element signature="n#!!block;n#showUpdateCaseModal#0" expanded="false" />
+                <element signature="n#!!block;n#validupdateform#0" expanded="false" />
+                <element signature="n#!!block;n#updateCase#0" expanded="false" />
+                <element signature="n#!!block;n#showDeleteCaseModal#0" expanded="false" />
+                <element signature="n#!!block;n#deleteCase#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -68,6 +176,7 @@
       <list>
         <option value="Class" />
         <option value="Jsp File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -75,7 +184,12 @@
     <findStrings>
       <find>javax</find>
       <find>javax.</find>
+      <find>TestCase</find>
+      <find>validupdateform</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="GradleLocalSettings">
     <option name="externalProjectsViewState">
@@ -87,10 +201,22 @@
       <list>
         <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContent-mvc.xml" />
         <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" />
-        <option value="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" />
         <option value="$PROJECT_DIR$/../autotest-web/pom.xml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java" />
+        <option value="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java" />
+        <option value="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties" />
+        <option value="$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" />
       </list>
     </option>
   </component>
@@ -124,11 +250,12 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1000" />
-    <option name="y" value="102" />
+    <option name="x" value="-1217" />
+    <option name="y" value="36" />
     <option name="width" value="983" />
     <option name="height" value="521" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -152,6 +279,75 @@
               <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
               <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="plugins" type="462c0819:PsiDirectoryNode" />
+              <item name="jquery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="jsp" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -172,7 +368,12 @@
     <property name="project.structure.side.proportion" value="0.27302995" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\xw\autotest\autotest-web\src\main\webapp\static\plugins\jquery" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\xw\autotest\autotest-web\src\main\webapp\static\plugins\jquery" />
+      <recent name="D:\xw\autotest\autotest-web\src\main\webapp\static\plugins" />
       <recent name="D:\xw\autotest\autotest-web\src\main\resources" />
     </key>
   </component>
@@ -188,7 +389,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Tomcat Server.autotest-web">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -209,6 +410,81 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+    </configuration>
+    <configuration name="TestService.testCaseService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.autotest.service.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="autotest-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.autotest.service.test" />
+      <option name="MAIN_CLASS_NAME" value="com.autotest.service.test.TestService" />
+      <option name="METHOD_NAME" value="testCaseService" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestService.testStepService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.autotest.service.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="autotest-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.autotest.service.test" />
+      <option name="MAIN_CLASS_NAME" value="com.autotest.service.test.TestService" />
+      <option name="METHOD_NAME" value="testStepService" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="TestService.testSuitService" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.autotest.service.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="autotest-service" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.autotest.service.test" />
+      <option name="MAIN_CLASS_NAME" value="com.autotest.service.test.TestService" />
+      <option name="METHOD_NAME" value="testSuitService" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
@@ -334,7 +610,6 @@
     <configuration name="autotest-web" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.29" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/autotest-web/" />
-      <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="autotest-web:war exploded">
           <settings>
@@ -411,6 +686,19 @@
       <option name="PROGRAM_PARAMETERS" />
       <predefined_log_file id="idea.log" enabled="true" />
     </configuration>
+    <list size="4">
+      <item index="0" class="java.lang.String" itemvalue="Tomcat Server.autotest-web" />
+      <item index="1" class="java.lang.String" itemvalue="JUnit.TestService.testSuitService" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.TestService.testStepService" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.TestService.testCaseService" />
+    </list>
+    <recent_temporary>
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.TestService.testCaseService" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.TestService.testStepService" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.TestService.testSuitService" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
@@ -421,16 +709,57 @@
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="09d57465-ddaf-42b2-b37a-04049f136b92" name="Default" comment="" />
+      <changelist id="" name="COM-1001" comment="" />
       <created>1522397633431</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522397633431</updated>
-      <workItem from="1522397640080" duration="6245000" />
+      <workItem from="1522397640080" duration="36226000" />
     </task>
+    <task id="LOCAL-00001" summary="添加mvc配置文件">
+      <created>1522419367800</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1522419367800</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 08h 59m 46s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 09h 04m 48s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 09h 06m 20s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 09h 07m 08s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 09h 08m 35s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 37m 21s.xml">
+      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 37m 40s.xml">
+      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 49m 30s.xml">
+      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 49m 47s.xml">
+      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 50m 16s.xml">
+      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6245000" />
+    <option name="totallyTimeSpent" value="36226000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -443,36 +772,35 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64897263" sideWeight="0.36459908" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4229452" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14599092" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102118" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37157536" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25214407" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.37671232" sideWeight="0.6354009" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5849057" sideWeight="0.6354009" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7084048" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2602118" sideWeight="0.48979592" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22390318" sideWeight="0.48979592" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2602118" sideWeight="0.5102041" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28473413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2602118" sideWeight="0.50855744" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -481,16 +809,70 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="添加mvc配置文件" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加mvc配置文件" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="18" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>((ArrayList) tCaseIds).elementData</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>((ArrayList) tCaseIds).size</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>tCaseIds</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/log4j.xml">
@@ -509,14 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
@@ -525,26 +899,315 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml">
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.6.RELEASE/spring-core-4.3.6.RELEASE.jar!/org/springframework/util/StringUtils.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="30" column="5" lean-forward="false" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <marker date="1521521559002" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1521521559002" expanded="false" signature="148:530" ph="..." />
+            <marker date="1521521559002" expanded="true" signature="873:880" ph="{}" />
+            <marker date="1521521559002" expanded="false" signature="927:938" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="975:981" ph=" }" />
+            <marker date="1521521559002" expanded="false" signature="1036:1047" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="1086:1092" ph=" }" />
+            <marker date="1521521559002" expanded="false" signature="1141:1152" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="1188:1194" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="1248:1579" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="1626:1637" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="1671:1677" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="1742:2072" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="2130:2141" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="2186:2192" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="2246:2709" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="2766:3190" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="3251:3558" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="3620:3955" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="4038:4341" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="4426:4758" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="4834:5315" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="5389:5880" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="5976:6221" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="6288:6637" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="6727:7344" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="7410:7421" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="7459:7465" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="7541:7977" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="8021:8032" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="8076:8082" ph=" }" />
+            <marker date="1521521559002" expanded="false" signature="8134:8145" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="8201:8207" ph=" }" />
+            <marker date="1521521559002" expanded="false" signature="8265:8276" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="8313:8319" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="8394:8483" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="8532:8543" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="8586:8592" ph=" }" />
+            <marker date="1521521559002" expanded="false" signature="8643:8654" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="8698:8704" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="8789:9415" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="9467:9695" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="9756:10132" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="10195:10570" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="10649:11016" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="11066:12551" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="12617:12628" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="12677:12683" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="12749:13510" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="13574:13912" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="13968:14078" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="14150:14470" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="14544:14850" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="14937:15364" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="15445:16065" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="16126:16294" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="16368:16479" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="16555:16780" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="16843:17216" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="17284:17708" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="17777:18270" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="18368:18456" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="18576:19298" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="19380:19454" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="19583:20269" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="20355:20435" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="20543:21485" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="21557:21568" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="21612:21618" ph=" }" />
+            <marker date="1521521559002" expanded="true" signature="21686:22018" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="22137:22578" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="22667:22739" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="22819:22881" ph="{...}" />
+            <marker date="1521521559002" expanded="true" signature="22959:23424" ph="{...}" />
+            <marker date="1521521559002" expanded="false" signature="23492:23503" ph=" { " />
+            <marker date="1521521559002" expanded="false" signature="23543:23549" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.6.RELEASE/spring-core-4.3.6.RELEASE-sources.jar!/org/springframework/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="329" column="33" lean-forward="false" selection-start-line="329" selection-start-column="33" selection-end-line="329" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.6.RELEASE/spring-context-4.3.6.RELEASE.jar!/org/springframework/context/ApplicationContext.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding>
+            <marker date="1521521557764" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1521521557764" expanded="false" signature="151:471" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-context/4.3.6.RELEASE/spring-context-4.3.6.RELEASE-sources.jar!/org/springframework/context/ApplicationContext.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-594">
-          <caret line="15" column="54" lean-forward="false" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.6.RELEASE/spring-web-4.3.6.RELEASE.jar!/org/springframework/web/context/WebApplicationContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+        <state relative-caret-position="132">
+          <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+          <folding>
+            <marker date="1521521560239" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1521521560239" expanded="false" signature="155:239" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.6.RELEASE/spring-web-4.3.6.RELEASE-sources.jar!/org/springframework/web/context/WebApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="52" column="7" lean-forward="false" selection-start-line="52" selection-start-column="7" selection-end-line="52" selection-end-column="7" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/pom.xml">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.6.RELEASE/spring-test-4.3.6.RELEASE.jar!/org/springframework/test/web/servlet/setup/StubWebApplicationContext.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+        <state relative-caret-position="-66">
+          <caret line="41" column="6" lean-forward="false" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
+          <folding>
+            <marker date="1521521561079" expanded="false" signature="0:104" ph="/.../" />
+            <marker date="1521521561079" expanded="false" signature="166:1845" ph="..." />
+            <marker date="1521521561079" expanded="true" signature="2578:2729" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="2830:2870" ph="{...}" />
+            <marker date="1521521561079" expanded="false" signature="2917:2928" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="2955:2961" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="2988:2999" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3014:3020" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="3060:3071" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3081:3087" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="3123:3134" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3158:3164" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="3198:3209" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3233:3239" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="3282:3293" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3305:3311" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="3352:3363" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3387:3393" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="3444:3455" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="3492:3498" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="3540:3885" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="3948:4002" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="4087:4155" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="4227:4289" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="4368:4428" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="4516:4584" ph="{...}" />
+            <marker date="1521521561079" expanded="false" signature="4630:4641" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="4684:4690" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="4773:4831" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="4914:4972" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="5083:5154" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="5259:5330" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="5410:5464" ph="{...}" />
+            <marker date="1521521561079" expanded="false" signature="5509:5520" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="5561:5567" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="5627:5638" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="5695:5701" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="5742:5753" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="5802:5808" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="5854:5865" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="5914:5920" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="5982:5993" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="6043:6049" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="6105:6116" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="6166:6172" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="6283:6387" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="6471:6532" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="6670:6769" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="6861:6943" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="7065:7144" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="7282:7369" ph="{...}" />
+            <marker date="1521521561079" expanded="false" signature="7416:7427" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="7439:7445" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="7496:7507" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="7550:7556" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="7653:7742" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="7846:7919" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="8031:8104" ph="{...}" />
+            <marker date="1521521561079" expanded="false" signature="8145:8156" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="8198:8204" ph=" }" />
+            <marker date="1521521561079" expanded="false" signature="8254:8265" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="8323:8329" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="8384:8391" ph="{}" />
+            <marker date="1521521561079" expanded="true" signature="8436:8443" ph="{}" />
+            <marker date="1521521561079" expanded="true" signature="8523:8605" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="8713:11044" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="8749:8760" ph="{}" />
+            <marker date="1521521561079" expanded="true" signature="8859:9096" ph="{...}" />
+            <marker date="1521521561079" expanded="false" signature="9149:9164" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="9209:9219" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="9317:9386" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="9482:9551" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="9629:9640" ph="{}" />
+            <marker date="1521521561079" expanded="true" signature="9749:9760" ph="{}" />
+            <marker date="1521521561079" expanded="false" signature="9835:9850" ph=" { " />
+            <marker date="1521521561079" expanded="false" signature="9870:9880" ph=" }" />
+            <marker date="1521521561079" expanded="true" signature="9982:10085" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="10187:10290" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="10453:10556" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="10662:10673" ph="{}" />
+            <marker date="1521521561079" expanded="true" signature="10779:10823" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="10928:10972" ph="{...}" />
+            <marker date="1521521561079" expanded="true" signature="11027:11038" ph="{}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-test/4.3.6.RELEASE/spring-test-4.3.6.RELEASE-sources.jar!/org/springframework/test/web/servlet/setup/StubWebApplicationContext.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-858">
+          <caret line="76" column="0" lean-forward="true" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="0" lean-forward="true" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestSuitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestSuitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/mybatis-config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="16" lean-forward="true" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/npm.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery-3.2.1.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ar.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -552,19 +1215,271 @@
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="33" column="32" lean-forward="false" selection-start-line="33" selection-start-column="32" selection-end-line="33" selection-end-column="32" />
+          <caret line="42" column="0" lean-forward="false" selection-start-line="42" selection-start-column="0" selection-end-line="51" selection-end-column="21" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="337">
+          <caret line="37" column="19" lean-forward="false" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestCaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="185">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.46/fastjson-1.2.46.jar!/com/alibaba/fastjson/JSON.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="100">
+          <caret line="402" column="25" lean-forward="false" selection-start-line="402" selection-start-column="25" selection-end-line="402" selection-end-column="25" />
+          <folding>
+            <element signature="e#15137#15138#0" expanded="true" />
+            <element signature="e#15194#15195#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestStepExecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/dao/ITestStep.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/resources/mapper/TestStepMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-44">
+          <caret line="13" column="33" lean-forward="true" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+          <folding>
+            <marker date="1522309885758" expanded="true" signature="272:317" ph="delete from test_step... " />
+            <marker date="1522309885758" expanded="true" signature="391:535" ph="update test_step... " />
+            <marker date="1522309885758" expanded="true" signature="609:770" ph="insert into test_step... " />
+            <marker date="1522309885758" expanded="true" signature="862:900" ph="SELECT * FRO... test_step" />
+            <marker date="1522309885758" expanded="true" signature="995:1054" ph="SELECT * FRO... test_step" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/dao/TestStepDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="44" column="0" lean-forward="true" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestStepExecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/model/TestStepExec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.6.RELEASE/spring-web-4.3.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="207" column="26" lean-forward="true" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="92" column="86" lean-forward="false" selection-start-line="92" selection-start-column="86" selection-end-line="92" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="193" column="20" lean-forward="true" selection-start-line="193" selection-start-column="16" selection-end-line="193" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="235">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="92" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/resources/mapper/TestCaseMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="87">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding>
+            <marker date="1522145392812" expanded="true" signature="272:308" ph="delete from test_case... " />
+            <marker date="1522145392812" expanded="true" signature="382:618" ph="update test_case... " />
+            <marker date="1522145392812" expanded="true" signature="692:923" ph="insert into test_case... " />
+            <marker date="1522145392812" expanded="true" signature="1015:1053" ph="SELECT * FRO... test_case" />
+            <marker date="1522145392812" expanded="true" signature="1148:1171" ph="SELECT * FRO... test_case" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="94" lean-forward="false" selection-start-line="2" selection-start-column="94" selection-end-line="2" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/dao/BaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="16" column="60" lean-forward="true" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
+          <folding>
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/dao/TestCaseDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+          <folding>
+            <element signature="e#647#648#0" expanded="true" />
+            <element signature="e#697#698#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestCaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/model/TestCase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="6" column="37" lean-forward="true" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="22" lean-forward="false" selection-start-line="0" selection-start-column="22" selection-end-line="0" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="94" lean-forward="false" selection-start-line="2" selection-start-column="94" selection-end-line="2" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery.validate.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+          <folding>
+            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#1704#1711#1#HTML" expanded="true" />
+            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4003#4010#1#HTML" expanded="true" />
+            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="e#4924#4931#1#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
-          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#427#428#0" expanded="true" />
+            <element signature="e#105#1803#0" expanded="false" />
+            <element signature="n#!!block;n#caseOperateFormatter#0" expanded="false" />
+            <element signature="n#!!block;n#stepDetailTable#0" expanded="false" />
+            <element signature="n#!!block;n#showAddCase#0" expanded="false" />
+            <element signature="n#!!block;n#addCase#0" expanded="false" />
+            <element signature="n#!!block;n#showUpdateCaseModal#0" expanded="false" />
+            <element signature="n#!!block;n#validupdateform#0" expanded="false" />
+            <element signature="n#!!block;n#updateCase#0" expanded="false" />
+            <element signature="n#!!block;n#showDeleteCaseModal#0" expanded="false" />
+            <element signature="n#!!block;n#deleteCase#0" expanded="false" />
           </folding>
         </state>
       </provider>

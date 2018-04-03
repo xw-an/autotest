@@ -87,8 +87,8 @@
             <!-- 让所有的方法都加入事务管理，为了提高效率，可以把一些查询之类的方法设置为只读的事务 -->
             <tx:method name="*" propagation="REQUIRED" read-only="true"/>
             <!-- 以下方法都是可能设计修改的方法，就无法设置为只读 -->
-            <tx:method name="add*" propagation="REQUIRED" rollback-for="Exception"/>
-            <tx:method name="del*" propagation="REQUIRED" rollback-for="Exception"/>
+            <tx:method name="insert*" propagation="REQUIRED" rollback-for="Exception"/>
+            <tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception"/>
             <tx:method name="update*" propagation="REQUIRED"  rollback-for="Exception"/>
             <tx:method name="save*" propagation="REQUIRED"  rollback-for="Exception"/>
         </tx:attributes>
