@@ -192,12 +192,18 @@ public class TestService {
 
     @Test
     public void testCaseService(){
-        TestCase tCase=new TestCase();
+/*        TestCase tCase=new TestCase();
         tCase.setTestScenariosName("123");
         tCase.setTestScenariosType("123");
         tCase.setTestContent("123");
         tCase.setRemark("123");
         tCase.setUserId("HQ");
-        tCaseService.addCase(tCase);
+        tCaseService.addCase(tCase);*/
+        System.out.println(tCaseService.runTestCase(1));
+    }
+
+    @Test
+    public void testJson(){
+        String str1="[{\"caseId\":1,}]";
     }
 }

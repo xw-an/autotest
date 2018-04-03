@@ -92,6 +92,7 @@ public class TestCaseService implements ITestCaseService {
     public boolean runTestCase(int caseId) {
         boolean resultStatus=false;
         List<TestStepExec> ltStepExec=tStepExecService.selectStepExec(caseId);
+        if(ltStepExec==null) return true;
         for(TestStepExec tStepExec:ltStepExec){
             String actionType=tStepExec.getActionType();
             String methodName="exec"+actionType.substring(0,1).toUpperCase()+actionType.substring(1);

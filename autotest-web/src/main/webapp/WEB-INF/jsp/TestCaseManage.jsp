@@ -28,8 +28,8 @@
                         <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a href="#">单线程模式</a></li>
-                        <li><a href="#">多线程模式</a></li>
+                        <li><a href="#" onclick="runCaseByType(1)">单线程模式</a></li>
+                        <li><a href="#" onclick="runCaseByType(2)">多线程模式</a></li>
                     </ul>
                 </div>
             </div>

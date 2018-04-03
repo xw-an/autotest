@@ -1,20 +1,22 @@
 package com.autotest.web.controller;
-
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
-import com.autotest.core.model.SystemParameters;
 import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestStepExec;
+import com.autotest.core.model.TestSuit;
 import com.autotest.service.bussiness.ITestCaseService;
 import com.autotest.service.bussiness.ITestStepExecService;
+import com.autotest.service.bussiness.ITestSuitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import static com.alibaba.fastjson.JSON.parseArray;
 
 @Controller
 @RequestMapping("/TestCaseManage")
@@ -24,6 +26,8 @@ public class TestCaseController {
     private ITestCaseService testCaseService;
     @Autowired
     private ITestStepExecService testStepExecService;
+    @Autowired
+    private ITestSuitService testSuitService;
 
     @RequestMapping
     public String showTestCaseManage(){
@@ -95,5 +99,41 @@ public class TestCaseController {
         return msg;
     }
 
-
+    @RequestMapping("/runCase")
+    @ResponseBody
+    public String runCase(@RequestBody JSONObject runParams){
+        JSONArray jsonArray=new JSONArray();
+        Map<Integer,Boolean> execResult=new HashMap<>();
+        Map<Integer,Integer> rowToId=new HashMap<>();//定义行号和用例id对应关系
+        List<Integer> lcaseIds=new ArrayList<>();//定义用例id集合
+        int type=runParams.getInteger("type");//获取运行类型
+        JSONArray jArray=runParams.getJSONArray("caseIds");//获取运行用例的集合
+        //映射行号和用例id之间的关系
+        for (Object obj : jArray) {
+            JSONObject c = (JSONObject) obj;
+            int rowId=c.getInteger("rowId");
+            int caseId=c.getInteger("caseId");
+            rowToId.put(caseId,rowId);
+            lcaseIds.add(caseId);
+        }
+        TestSuit testSuit=new TestSuit();
+        testSuit.setCaseIds(lcaseIds);
+        switch(type){
+            case 1://单线程运行
+                execResult=testSuitService.runByOrder(testSuit);
+                break;
+            case 2://多线程运行
+                execResult=testSuitService.runBySynchronize(testSuit);
+                break;
+            default:break;
+        }
+        for(Integer id:execResult.keySet()){
+            int rowId=rowToId.get(id);
+            JSONObject jsonObject=new JSONObject();
+            jsonObject.put("rowId",rowId);
+            jsonObject.put("result",execResult.get(id));
+            jsonArray.add(jsonObject);
+        }
+        return JSONArray.toJSONString(jsonArray);
+    }
 }

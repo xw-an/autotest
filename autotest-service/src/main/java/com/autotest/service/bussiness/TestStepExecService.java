@@ -92,6 +92,7 @@ public class TestStepExecService implements ITestStepExecService {
     public List<TestStepExec> selectStepExec(int caseId) {
         List<TestStepExec> ltStepExec=new ArrayList<>();
         List<TestStep> ltStep=tsDao.selectList(caseId);
+        if(ltStep.size()<1) return null;
         for(TestStep ts:ltStep){
             Map<String,String> actionMaps=new HashMap<>();
             List<TestExec> ltExec= teDao.selectList(caseId,ts.getId());//根据操作类型查询对应key,value

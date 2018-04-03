@@ -14,6 +14,13 @@ $(function(){
         height:800,
         detailView:true,
         onExpandRow:stepDetailTable,
+        responseHandler: function (res) {
+            var len = res.length;
+            for(var i=0;i<len;i++){
+                res[i].rowIndexId = i;
+            }
+            return res;
+        },
         columns: [{
             field: 'state',
             checkbox: true,
@@ -58,6 +65,12 @@ $(function(){
             valign: 'middle',
             visible: true
         },{
+            field: 'testResult',
+            title: '运行结果',
+            align: 'center',
+            valign: 'middle',
+            visible: true
+        },{
             field: 'operation',
             title: '操作',
             align: 'center',
@@ -78,7 +91,7 @@ window.caseOperateEvents = {
         showDeleteCaseModal(row);//使【删除测试用例】模态框可见
     },
     'click #runCase': function (e, value, row, index) {
-        runTestCase(index,row);
+        runCase(index,row);//运行测试用例
     }
 };
 
@@ -238,4 +251,86 @@ function deleteCase(){
             $('#testCaseTable').bootstrapTable('refresh');
         }
     })
+}
+
+//运行单条测试用例
+function runCase(index,row){
+    //更新测试结果这一列的值
+    $('#testCaseTable').bootstrapTable("updateCell", {
+        index : index,
+        field : 'testResult',
+        value : "<a href='#'><span class='label label-warning' style='font-size:14px'>Run</span></a>"
+    });
+    var runParams={userId:"HQ001",type:1,caseIds:[{"caseId":row.id,"rowId":row.rowIndexId}]};//1表示单线程，2表示多线程
+    $.ajax({
+        type:"post",
+        url:"./TestCaseManage/runCase",
+        contentType: 'application/json;charset=UTF-8', //内容类型
+        traditional: true, //使json格式的字符串不会被转码
+        data: JSON.stringify(runParams),//TODO 接入权限管理以后需要动态获取
+        error:function(){
+           var execResult = "<a href='#'><span class='label label-danger' style='font-size:14px'>Fail</span></a>";
+            //更新测试结果这一列的值
+            $('#testCaseTable').bootstrapTable("updateCell", {
+                index : index,
+                field : 'testResult',
+                value : execResult
+            });
+        },
+        success:function(data){
+            var execResult;
+            if(data[0].result){
+                execResult = "<a href='#'><span class='label label-success' style='font-size:14px'>Success</span></a>";
+            }else{
+                execResult = "<a href='#'><span class='label label-danger' style='font-size:16px'>Fail</span></a>";
+            }
+            //更新测试结果这一列的值
+            $('#testCaseTable').bootstrapTable("updateCell", {
+                index : index,
+                field : 'testResult',
+                value : execResult
+            });
+        }
+    });
+}
+
+//单线/多线程模式运行测试集
+function runCaseByType(type){
+    var checks=$('#testCaseTable').bootstrapTable('getSelections');
+    var paramsArray = new Array();
+    if(checks.length==0){
+        alert("请勾选一条测试用例");
+    }
+    else{
+        for(var i=0;i<checks.length;i++){
+            var paramObj={caseId:checks[i].id,rowId:checks[i].rowIndexId}
+            paramsArray.push(paramObj);
+        }
+        //var obj = JSON.stringify(paramsArray);//将对象转换成json字符串
+        var runParams={userId:"HQ001",type:type,caseIds:paramsArray};//1表示单线程，2表示多线程
+
+        $.ajax({
+            type:"post",
+            url:"./TestCaseManage/runCase",
+            contentType: 'application/json;charset=UTF-8', //内容类型
+            traditional: true, //使json格式的字符串不会被转码
+            data: JSON.stringify(runParams),
+            success:function(data){
+                for(var i=0;i<data.length;i++){
+                    var execResult;
+                    if(data[i].result){
+                        execResult = "<a href='#'><span class='label label-success' style='font-size:14px'>Success</span></a>";
+                    }else{
+                        execResult = "<a href='#'><span class='label label-danger' style='font-size:16px'>Fail</span></a>";
+                    }
+                    //更新对应行的测试结果这一列的值
+                    $('#testCaseTable').bootstrapTable("updateCell", {
+                        index : data[i].rowId,
+                        field : 'testResult',
+                        value : execResult
+                    });
+                }
+            }
+        });
+    }
 }
