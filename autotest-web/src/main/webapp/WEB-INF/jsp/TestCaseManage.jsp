@@ -23,7 +23,7 @@
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-primary" onclick="showAddCase()">新增用例</button>
                 <div class="btn-group" role="group">
-                    <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         运行用例
                         <span class="caret"></span>
                     </button>

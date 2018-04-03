@@ -32,9 +32,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">用例管理</a></li>
-                    <li><a href="#">执行日志</a></li>
-                    <li><a href="#">工具集</a></li>
+                    <li><a href="<%=basePath%>/TestCaseManage"><span class="glyphicon glyphicon-th-large"></span>&nbsp;&nbsp;用例管理</a></li>
+                    <li><a href="<%=basePath%>/TestStepManage"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;配置步骤</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;执行日志</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;工具集</a></li>
                 </ul>
             </div>
         </div>
