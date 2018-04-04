@@ -60,7 +60,8 @@
                         </div>
                         <div class="form-group" id="actionTypeGroup">
                             <label>动作类型</label>
-                            <select class="form-control">
+                            <select class="form-control" id="actionType" onchange="showActionMap()">
+                                <option value="请选择">请选择</option>
                                 <option value="db">数据库</option>
                                 <option value="callInterface">接口</option>
                                 <option value="checkValue">验证</option>

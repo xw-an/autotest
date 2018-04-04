@@ -81,9 +81,36 @@ function searchStep(){
     })
 }
 
-
-
 //显示添加步骤模态框
 function showAddStep(){
     $('#addStepModal').modal('show');
+}
+
+//动态显示对应动作类型的输入内容
+function showActionMap(){
+    $('.actionParams').remove();
+    var actionType=$('#actionType').val();
+    if(actionType=='请选择') return;
+    //ajax请求获取类型下的所有参数
+    $.ajax({
+        type:"post",
+        url:"./TestStepManage/"+actionType+"/getActionParams",
+        dataType:"json",
+        contentType: "application/json",
+        traditional: true, //使json格式的字符串不会被转码
+        success:function(data){
+            for(var i=0;i<data.length;i++){
+                //界面展示填写项
+                var name=data[i]
+                var html="<div class=\"form-group actionParams\" id=\""+name+"Group\">\n" +
+                    "<label>"+name+"</label>\n" +
+                    "<input type=\"text\" class=\"form-control\" name=\"stepName\" id=\""+name+"\">\n" +
+                    "</div>"
+                $('#addStepForm .form-group').last().append(html);
+            }
+        },
+        error:function(){
+            alert("数据加载失败");
+        }
+    })
 }
