@@ -126,10 +126,21 @@ function addStep(){
     var actionType=$('#actionType').val();
     //从第三个控件开始获取
     var len=$('#addStepForm .form-group').length;
-
+    var actionMap={};
     for(var i=2;i<len;i++){
         var paramName=$("#addStepForm .form-group:eq("+i+") input").attr("id");
         var paramValue=$("#addStepForm .form-group:eq("+i+") input").val();
     }
+    //TODO 生成json的actionMap
+    //往表格中插入一行记录
+    var data={stepId:1,stepName:stepName,actionType:actionType,actionMap:"test"};
+    //TODO 获取步骤id
+
+    $('#caseStepsTable').bootstrapTable('prepend',data);
+    $('#addStepForm')[0].reset();
+    for(var i=2;i<len;i++){
+        $("#addStepForm .form-group:eq("+i+")").remove();
+    }
+    $('#addStepModal').modal('hide');
 }
 
