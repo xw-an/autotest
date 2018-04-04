@@ -6,107 +6,8 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="09d57465-ddaf-42b2-b37a-04049f136b92" name="Default" comment="添加mvc配置文件">
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/mybatis-config.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.az.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.bg.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.bn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ca.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.cs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.da.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.de.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ee.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.el.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.es.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.fi.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.fr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.he.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.hr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.hu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.hy.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.id.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.is.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.it.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ja.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ka.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ko.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.lt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.lv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ms.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.nb.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.nl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.no.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.pl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.pt-BR.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.pt.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ro.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.rs-latin.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.rs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ru.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sl.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sv.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.sw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.th.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.tr.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.ua.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.uk.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-TW.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap-datetimepicker/less/datetimepicker.less" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap-theme.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/css/bootstrap.min.css.map" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.eot" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.svg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/fonts/glyphicons-halflings-regular.woff2" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/bootstrap.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/bootstrap.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstrap/js/npm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-editable.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-editable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table-editable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table-zh-CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.min.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/bootstraptable/bootstrap-table.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery-3.2.1.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery-3.2.1.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/jquery.validate.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/plugins/jquery/messages_zh.js" />
-      <change beforePath="$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/../autotest-core/target/classes/applicationContext.xml" afterPath="$PROJECT_DIR$/../autotest-core/target/classes/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../autotest-core/target/classes/jdbc.properties" afterPath="$PROJECT_DIR$/../autotest-core/target/classes/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/../autotest-core/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/../autotest-core/target/classes/log4j.properties" />
+    <list default="true" id="09d57465-ddaf-42b2-b37a-04049f136b92" name="Default" comment="完成添加步骤动态填写参数">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java" afterPath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java" />
-      <change beforePath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java" afterPath="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java" />
-      <change beforePath="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/Test.xml" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" afterPath="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" />
-      <change beforePath="$PROJECT_DIR$/../autotest-service/target/classes/com/autotest/service/bussiness/TestActionService.class" afterPath="$PROJECT_DIR$/../autotest-service/target/classes/com/autotest/service/bussiness/TestActionService.class" />
-      <change beforePath="$PROJECT_DIR$/../autotest-service/target/test-classes/com/autotest/service/test/TestService.class" afterPath="$PROJECT_DIR$/../autotest-service/target/test-classes/com/autotest/service/test/TestService.class" />
-      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" afterPath="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" />
-      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml" />
-      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties" />
-      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" afterPath="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" />
     </list>
     <ignored path="$PROJECT_DIR$/../autotest-web/target/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -118,6 +19,9 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/autotest_parent$autotest_web.coverage" NAME="autotest-web Coverage Results" MODIFIED="1522746729025" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -138,32 +42,42 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TestCaseController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java">
+      <file leaf-file-name="TestStepManage.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestStepManage.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="352">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="278">
+              <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+              <folding>
+                <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestCaseManage.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js">
+      <file leaf-file-name="TestStepManage.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestStepManage.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
+            <state relative-caret-position="176">
+              <caret line="94" column="12" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
               <folding>
-                <element signature="e#105#1803#0" expanded="false" />
-                <element signature="n#!!block;n#caseOperateFormatter#0" expanded="false" />
-                <element signature="n#!!block;n#stepDetailTable#0" expanded="false" />
-                <element signature="n#!!block;n#showAddCase#0" expanded="false" />
-                <element signature="n#!!block;n#addCase#0" expanded="false" />
-                <element signature="n#!!block;n#showUpdateCaseModal#0" expanded="false" />
-                <element signature="n#!!block;n#validupdateform#0" expanded="false" />
-                <element signature="n#!!block;n#updateCase#0" expanded="false" />
-                <element signature="n#!!block;n#showDeleteCaseModal#0" expanded="false" />
-                <element signature="n#!!block;n#deleteCase#0" expanded="false" />
+                <element signature="e#1071#1370#0" expanded="false" />
+                <element signature="n#!!block;n#stepOperateFormatter#0" expanded="false" />
+                <element signature="n#!!block;n#showAddStep#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestStepController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestStepController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-154">
+              <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+              <folding>
+                <element signature="e#959#960#0" expanded="true" />
+                <element signature="e#998#999#0" expanded="true" />
+                <element signature="method#showCaseSteps#0;class#TestStepController#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -174,8 +88,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
         <option value="JavaScript File" />
       </list>
     </option>
@@ -186,7 +100,14 @@
       <find>javax.</find>
       <find>TestCase</find>
       <find>validupdateform</find>
+      <find>indexId</find>
+      <find>http://localhost:8080/autotest-web/TestStepManage</find>
+      <find>searchStep</find>
     </findStrings>
+    <replaceStrings>
+      <replace>rowToId</replace>
+      <replace>rowId</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -205,18 +126,25 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java" />
         <option value="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestActionService.java" />
-        <option value="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" />
         <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" />
         <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/../autotest-core/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/../autotest-core/src/main/resources/jdbc.properties" />
         <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/jdbc.properties" />
-        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" />
-        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js" />
-        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp" />
+        <option value="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestCaseService.java" />
+        <option value="$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestStepExecService.java" />
+        <option value="$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java" />
         <option value="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestStepManage.java" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestStepManageController.java" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestStepController.java" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestStepManage.jsp" />
+        <option value="$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestStepManage.js" />
       </list>
     </option>
   </component>
@@ -250,8 +178,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-1217" />
-    <option name="y" value="36" />
+    <option name="x" value="-1552" />
+    <option name="y" value="-19" />
     <option name="width" value="983" />
     <option name="height" value="521" />
   </component>
@@ -295,6 +223,21 @@
               <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
+              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -311,25 +254,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
-              <item name="autotest-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="jquery" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="autotest-parent" type="b2602c69:ProjectViewProjectNode" />
@@ -610,6 +534,7 @@
     <configuration name="autotest-web" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.29" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="1.8">
       <option name="OPEN_IN_BROWSER" value="false" />
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/autotest-web/" />
+      <option name="UPDATING_POLICY" value="update-resources" />
       <deployment>
         <artifact name="autotest-web:war exploded">
           <settings>
@@ -714,7 +639,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1522397633431</updated>
-      <workItem from="1522397640080" duration="36226000" />
+      <workItem from="1522397640080" duration="73973000" />
     </task>
     <task id="LOCAL-00001" summary="添加mvc配置文件">
       <created>1522419367800</created>
@@ -723,7 +648,42 @@
       <option name="project" value="LOCAL" />
       <updated>1522419367800</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="完成测试用例增删改插">
+      <created>1522721619675</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1522721619675</updated>
+    </task>
+    <task id="LOCAL-00003" summary="完成测试用例运行功能">
+      <created>1522740123962</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1522740123962</updated>
+    </task>
+    <task id="LOCAL-00004" summary="配置步骤界面">
+      <created>1522748385845</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1522748385845</updated>
+    </task>
+    <task id="LOCAL-00005" summary="完成查询步骤功能">
+      <created>1522810234566</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1522810234566</updated>
+    </task>
+    <task id="LOCAL-00006" summary="完成添加步骤动态填写参数">
+      <created>1522813811260</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1522813811260</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -742,11 +702,11 @@
     <history-entry file="TestService_testCaseService - 2018.04.03 at 09h 08m 35s.xml">
       <configuration name="TestService.testCaseService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 37m 21s.xml">
-      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 10h 41m 13s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="TestService_testStepService - 2018.04.02 at 16h 37m 40s.xml">
-      <configuration name="TestService.testStepService" configurationId="JUnit" />
+    <history-entry file="TestService_testCaseService - 2018.04.03 at 10h 41m 55s.xml">
+      <configuration name="TestService.testCaseService" configurationId="JUnit" />
     </history-entry>
     <history-entry file="TestService_testStepService - 2018.04.02 at 16h 49m 30s.xml">
       <configuration name="TestService.testStepService" configurationId="JUnit" />
@@ -759,7 +719,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="36226000" />
+    <option name="totallyTimeSpent" value="73973000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -772,11 +732,12 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-1374" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.64897263" sideWeight="0.36459908" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4229452" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.102118" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35334477" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18456884" sideWeight="0.49041095" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -784,20 +745,21 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25214407" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49914238" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.4969743" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5849057" sideWeight="0.6354009" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.7084048" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22390318" sideWeight="0.48979592" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45586592" sideWeight="0.6354009" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.37392795" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18456884" sideWeight="0.509589" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32849163" sideWeight="0.4969743" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17397882" sideWeight="0.48979592" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2602118" sideWeight="0.5102041" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28473413" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28379887" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2602118" sideWeight="0.50855744" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -840,16 +802,25 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="添加mvc配置文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加mvc配置文件" />
+    <MESSAGE value="完成测试用例增删改插" />
+    <MESSAGE value="完成测试用例运行功能" />
+    <MESSAGE value="配置步骤界面" />
+    <MESSAGE value="完成查询步骤功能" />
+    <MESSAGE value="完成添加步骤动态填写参数" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成添加步骤动态填写参数" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="18" />
+      <option name="time" value="46" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="JSON.toJSONString(lsteps)" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -857,6 +828,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>JSON.toJSONString(lsteps)</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>((ArrayList) tCaseIds).elementData</expression-string>
         <language-id>JAVA</language-id>
@@ -875,40 +851,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-448">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-586">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="13" column="17" lean-forward="true" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.6.RELEASE/spring-core-4.3.6.RELEASE.jar!/org/springframework/util/StringUtils.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
@@ -1148,22 +1090,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestSuitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestSuitService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="29" column="45" lean-forward="true" selection-start-line="29" selection-start-column="45" selection-end-line="29" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/mybatis-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
@@ -1228,14 +1154,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestCaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/alibaba/fastjson/1.2.46/fastjson-1.2.46.jar!/com/alibaba/fastjson/JSON.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
@@ -1244,14 +1162,6 @@
             <element signature="e#15137#15138#0" expanded="true" />
             <element signature="e#15194#15195#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestStepExecService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1285,58 +1195,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestStepExecService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="94" column="32" lean-forward="true" selection-start-line="94" selection-start-column="32" selection-end-line="94" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/model/TestStepExec.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.6.RELEASE/spring-web-4.3.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="207" column="26" lean-forward="true" selection-start-line="207" selection-start-column="26" selection-end-line="207" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/resources/applicationContext.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="278">
           <caret line="92" column="86" lean-forward="false" selection-start-line="92" selection-start-column="86" selection-end-line="92" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="193" column="20" lean-forward="true" selection-start-line="193" selection-start-column="16" selection-end-line="193" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="235">
-          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="92" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="19" column="19" lean-forward="true" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1376,8 +1238,8 @@
         <state relative-caret-position="176">
           <caret line="16" column="60" lean-forward="true" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
           <folding>
-            <element signature="e#377#378#0" expanded="true" />
-            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="false" />
+            <element signature="e#435#436#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1387,17 +1249,9 @@
         <state relative-caret-position="176">
           <caret line="26" column="17" lean-forward="false" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
           <folding>
-            <element signature="e#647#648#0" expanded="true" />
-            <element signature="e#697#698#0" expanded="true" />
+            <element signature="e#647#648#0" expanded="false" />
+            <element signature="e#697#698#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestCaseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="33" column="22" lean-forward="false" selection-start-line="33" selection-start-column="22" selection-end-line="33" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1433,53 +1287,186 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.6.RELEASE/spring-webmvc-4.3.6.RELEASE.jar!/org/springframework/web/servlet/mvc/method/annotation/ServletInvocableHandlerMethod.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="242">
-          <caret line="20" column="76" lean-forward="false" selection-start-line="20" selection-start-column="76" selection-end-line="20" selection-end-column="76" />
+        <state relative-caret-position="102">
+          <caret line="62" column="0" lean-forward="false" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp">
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestSuitService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="141" column="10" lean-forward="true" selection-start-line="141" selection-start-column="10" selection-end-line="141" selection-end-column="10" />
+        <state relative-caret-position="132">
+          <caret line="7" column="32" lean-forward="false" selection-start-line="7" selection-start-column="32" selection-end-line="7" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestSuitService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/test/java/com/autotest/service/test/TestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="611">
+          <caret line="205" column="27" lean-forward="true" selection-start-line="205" selection-start-column="27" selection-end-line="205" selection-end-column="27" />
           <folding>
-            <element signature="n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#1704#1711#1#HTML" expanded="true" />
-            <element signature="n#div#2;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#4003#4010#1#HTML" expanded="true" />
-            <element signature="n#div#3;n#body#0;n#html#0;n#!!top" expanded="false" />
-            <element signature="e#4924#4931#1#HTML" expanded="true" />
+            <element signature="e#8056#8057#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.6.RELEASE/spring-web-4.3.6.RELEASE-sources.jar!/org/springframework/web/method/support/InvocableHandlerMethod.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="132" column="0" lean-forward="false" selection-start-line="132" selection-start-column="0" selection-end-line="132" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/commonNavbars.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="34" column="23" lean-forward="false" selection-start-line="34" selection-start-column="23" selection-end-line="34" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestCaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-319">
+          <caret line="93" column="0" lean-forward="false" selection-start-line="93" selection-start-column="0" selection-end-line="93" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestCaseService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/TestStepExecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="47" column="54" lean-forward="false" selection-start-line="47" selection-start-column="54" selection-end-line="47" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestStepExecService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-core/src/main/java/com/autotest/core/model/TestStepExec.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="29" lean-forward="false" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestCaseManage.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="91" column="2" lean-forward="true" selection-start-line="91" selection-start-column="2" selection-end-line="91" selection-end-column="2" />
+        <state relative-caret-position="26">
+          <caret line="158" column="40" lean-forward="false" selection-start-line="158" selection-start-column="8" selection-end-line="158" selection-end-column="40" />
           <folding>
-            <element signature="e#105#1803#0" expanded="false" />
+            <element signature="e#2203#2534#0" expanded="false" />
             <element signature="n#!!block;n#caseOperateFormatter#0" expanded="false" />
-            <element signature="n#!!block;n#stepDetailTable#0" expanded="false" />
             <element signature="n#!!block;n#showAddCase#0" expanded="false" />
-            <element signature="n#!!block;n#addCase#0" expanded="false" />
             <element signature="n#!!block;n#showUpdateCaseModal#0" expanded="false" />
             <element signature="n#!!block;n#validupdateform#0" expanded="false" />
             <element signature="n#!!block;n#updateCase#0" expanded="false" />
             <element signature="n#!!block;n#showDeleteCaseModal#0" expanded="false" />
             <element signature="n#!!block;n#deleteCase#0" expanded="false" />
+            <marker date="1522739969737" expanded="true" signature="9634:9648" ph="..." />
+            <marker date="1522739969737" expanded="true" signature="9788:9802" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1366">
+          <caret line="89" column="0" lean-forward="false" selection-start-line="89" selection-start-column="0" selection-end-line="92" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestCaseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="58" column="46" lean-forward="true" selection-start-line="58" selection-start-column="46" selection-end-line="58" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestCaseManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-263">
+          <caret line="86" column="40" lean-forward="true" selection-start-line="86" selection-start-column="40" selection-end-line="86" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-service/src/main/java/com/autotest/service/bussiness/ITestActionService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="6" column="24" lean-forward="false" selection-start-line="6" selection-start-column="24" selection-end-line="6" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/java/com/autotest/web/controller/TestStepController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="32" column="14" lean-forward="true" selection-start-line="32" selection-start-column="14" selection-end-line="32" selection-end-column="14" />
+          <folding>
+            <element signature="e#959#960#0" expanded="true" />
+            <element signature="e#998#999#0" expanded="true" />
+            <element signature="method#showCaseSteps#0;class#TestStepController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/WEB-INF/jsp/TestStepManage.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="69" column="30" lean-forward="true" selection-start-line="69" selection-start-column="30" selection-end-line="69" selection-end-column="30" />
+          <folding>
+            <element signature="n#div#1;n#body#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#style#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../autotest-web/src/main/webapp/static/js/TestStepManage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="94" column="12" lean-forward="true" selection-start-line="94" selection-start-column="12" selection-end-line="94" selection-end-column="12" />
+          <folding>
+            <element signature="e#1071#1370#0" expanded="false" />
+            <element signature="n#!!block;n#stepOperateFormatter#0" expanded="false" />
+            <element signature="n#!!block;n#showAddStep#0" expanded="false" />
           </folding>
         </state>
       </provider>
