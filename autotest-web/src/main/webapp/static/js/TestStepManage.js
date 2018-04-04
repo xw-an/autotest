@@ -69,14 +69,21 @@ function searchStep(){
         type:"post",
         url:"./TestStepManage/caseSteps",
         dataType:"json",
-        contentType: "application/json;charset=UTF-8",
+        contentType: "application/json",
         traditional: true, //使json格式的字符串不会被转码
         data:JSON.stringify(searchParams),
-        error:function(data){
-            alert(data);
-        },
         success:function(data){
             $('#caseStepsTable').bootstrapTable('load',data);
+        },
+        error:function(){
+            $('#caseStepsTable').bootstrapTable('removeAll');
         }
     })
+}
+
+
+
+//显示添加步骤模态框
+function showAddStep(){
+    $('#addStepModal').modal('show');
 }

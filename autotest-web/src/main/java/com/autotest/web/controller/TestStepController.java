@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,21 +23,22 @@ public class TestStepController {
         return "TestStepManage";
     }
 
-    @RequestMapping(value = "/caseSteps")
     @ResponseBody
+    @RequestMapping(value = "/caseSteps")
     public String showCaseSteps(@RequestBody JSONObject searchParams){
         if(searchParams.getString("caseId")==null) return null;
         int caseId=Integer.parseInt(searchParams.getString("caseId"));
         List<TestStepExec> ltStepExec=testStepExecService.selectStepExec(caseId);
-        List<JSONObject> ljsonObject=new ArrayList<>();
+        if(ltStepExec==null) return null;
+        List<JSONObject> lsteps=new ArrayList<>();
         for(TestStepExec tStepExec:ltStepExec){
             JSONObject jo=new JSONObject();
             jo.put("stepId",String.valueOf(tStepExec.getstepId()));
             jo.put("stepName",tStepExec.getStepName());
             jo.put("actionType",tStepExec.getActionType());
             jo.put("actionMap", JSON.toJSONString(tStepExec.getActionMap()));
-            ljsonObject.add(jo);
+            lsteps.add(jo);
         }
-        return JSON.toJSONString(ljsonObject);
+        return JSON.toJSONString(lsteps);
     }
 }
