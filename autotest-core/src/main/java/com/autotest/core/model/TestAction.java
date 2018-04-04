@@ -6,6 +6,7 @@ public class TestAction {
     private int id;
     private String actionType;
     private String keyName;
+    private String name;
     private Timestamp dataChange_CreateTime;
     private Timestamp dataChange_LastTime;
 
@@ -15,6 +16,7 @@ public class TestAction {
                 "id=" + id +
                 ", actionType='" + actionType + '\'' +
                 ", keyName='" + keyName + '\'' +
+                ", name='" + name + '\'' +
                 ", dataChange_CreateTime=" + dataChange_CreateTime +
                 ", dataChange_LastTime=" + dataChange_LastTime +
                 '}';
@@ -42,6 +44,14 @@ public class TestAction {
 
     public void setKeyName(String keyName) {
         this.keyName = keyName;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Timestamp getDataChange_CreateTime() {

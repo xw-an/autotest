@@ -11,13 +11,14 @@
     <update id="update" parameterType="TestAction">
         update test_action
         set actionType = #{actionType},
-        keyName = #{keyName}
+        keyName = #{keyName},
+        name=#{name}
         where id=#{id}
     </update>
 
     <insert id="insert" parameterType="TestAction">
-        insert into test_action(actionType,keyName,dataChange_CreateTime,dataChange_LastTime)
-        values(#{actionType},#{keyName},now(),now());
+        insert into test_action(actionType,keyName,name,dataChange_CreateTime,dataChange_LastTime)
+        values(#{actionType},#{keyName},#{name},now(),now());
     </insert>
 
     <select id="select" parameterType="int" resultType="TestAction">

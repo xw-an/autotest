@@ -42,10 +42,10 @@ public class TestService {
 
     @Test
     public void testActionService(){
-        List<String> dbs=taservice.selectKey("db");
-        for(String k:dbs){
+        Map dbs=taservice.selectKey("db");
+       /* for(String k:dbs){
             System.out.println(k);
-        }
+        }*/
     }
 
     @Test

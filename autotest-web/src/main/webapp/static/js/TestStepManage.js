@@ -99,12 +99,13 @@ function showActionMap(){
         contentType: "application/json",
         traditional: true, //使json格式的字符串不会被转码
         success:function(data){
-            for(var i=0;i<data.length;i++){
+            for (var key in data)
+            {
                 //界面展示填写项
-                var name=data[i]
-                var html="<div class=\"form-group actionParams\" id=\""+name+"Group\">\n" +
+                var name=data[key]
+                var html="<div class=\"form-group actionParams\" id=\""+key+"Group\">\n" +
                     "<label>"+name+"</label>\n" +
-                    "<input type=\"text\" class=\"form-control\" name=\"stepName\" id=\""+name+"\">\n" +
+                    "<input type=\"text\" class=\"form-control\" name=\""+key+"\" id=\""+key+"\" placeholder=\""+key+"\">\n" +
                     "</div>"
                 $('#addStepForm .form-group').last().append(html);
             }
@@ -114,3 +115,21 @@ function showActionMap(){
         }
     })
 }
+
+//对新增步骤提交数据做校验
+//TODO
+
+//操作新增步骤，将记录插入到表格中
+function addStep(){
+    //获取步骤信息
+    var stepName=$('#stepName').val();
+    var actionType=$('#actionType').val();
+    //从第三个控件开始获取
+    var len=$('#addStepForm .form-group').length;
+
+    for(var i=2;i<len;i++){
+        var paramName=$("#addStepForm .form-group:eq("+i+") input").attr("id");
+        var paramValue=$("#addStepForm .form-group:eq("+i+") input").val();
+    }
+}
+

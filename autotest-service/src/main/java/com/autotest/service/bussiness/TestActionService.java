@@ -33,15 +33,15 @@ public class TestActionService implements ITestActionService {
      * @return
      */
     @Override
-    public List<String> selectKey(String actionType) {
-        List<String> keyNames = new ArrayList<String>();
+    public Map<String,String> selectKey(String actionType) {
+        Map<String,String> actionMap=new HashMap<>();
         Map<String, Object> maps = new HashMap<String, Object>();
         maps.put("actionType", actionType);
         List<TestAction> lta = taDao.selectList(maps);
         for (TestAction ta : lta) {
-            keyNames.add(ta.getKeyName());
+            actionMap.put(ta.getKeyName(),ta.getName());
         }
-        return keyNames;
+        return actionMap;
     }
 
     /**

@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @Controller
 @RequestMapping("/TestStepManage")
@@ -58,7 +59,7 @@ public class TestStepController {
     @RequestMapping("{actionType}/getActionParams")
     @ResponseBody
     public String getActionMap(@PathVariable String actionType){
-        List<String> actionParams=testActionService.selectKey(actionType);
-        return JSON.toJSONString(actionParams);
+       Map<String,String> actionParams=testActionService.selectKey(actionType);
+       return JSON.toJSONString(actionParams);
     }
 }

@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Map;
 
 public interface ITestActionService {
-    public List<String> selectKey(String actionType);
+    public Map<String,String> selectKey(String actionType);
 
     public boolean execDb(Map<String, Object> dbMaps);
 
