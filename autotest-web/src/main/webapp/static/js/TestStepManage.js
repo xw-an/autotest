@@ -44,13 +44,13 @@ $(function(){
 //父表格操作项
 window.stepOperateEvents = {
     'click #updateCaseStep': function (e, value, row, index) {
-        updateCaseStep(row);
+        updateCaseStep(row,index);
     },
     'click #deleteCaseStep': function (e, value, row, index) {
         deleteCaseStep(row,index);
     },
     'click #addCurrentStep': function (e, value, row, index) {
-        addCurrentStep(row);
+        addCurrentStep(row,index);
     }
 };
 
@@ -85,6 +85,9 @@ function searchStep(){
 //显示添加步骤模态框
 function showAddStep(){
     $('#addStepModal').modal('show');
+    $('#addStepButton').one("click",function () {
+        addStep(-1);
+    });
 }
 
 //动态显示新增步骤框中的对应动作类型的输入内容
@@ -136,12 +139,11 @@ function clearActionMap(type){
     }
 }
 
-
 //对新增步骤提交数据做校验
 //TODO
 
 //操作新增步骤，将记录插入到表格中
-function addStep(){
+function addStep(index){
     //获取步骤信息
     var stepName=$('#stepName').val();
     var actionType=$('#actionType').val();
@@ -155,15 +157,19 @@ function addStep(){
     }
     //往表格中插入一行记录
     var data={stepName:stepName,actionType:actionType,actionMap:JSON.stringify(actionMap)};
-    $('#caseStepsTable').bootstrapTable('append',data);
+    if(index!=-1){
+        $('#caseStepsTable').bootstrapTable('insertRow',{index:index+1,row:data});
+    }else{
+        $('#caseStepsTable').bootstrapTable('append',data);
+    }
     clearActionMap('add');
 }
 
 //TODO 删除当前步骤
 function deleteCaseStep(row,index) {
-    $('#caseStepsTable').bootstrapTable('remove', {field: 'stepId', values:row.stepId});
+    $("#caseStepsTable tr[data-index='"+index+"']").remove();
+    //$('#caseStepsTable').bootstrapTable('remove', {field: 'state', values:"true"});
 }
-
 
 //动态显示修改步骤框中的对应动作类型的输入内容
 function updateActionMap(){
@@ -196,7 +202,7 @@ function updateActionMap(){
 }
 
 //显示修改步骤模态框
-function updateCaseStep(row){
+function updateCaseStep(row,index){
     $('#updateStepModal').modal('show');
     $('#updateStepName').val(row.stepName);
     $('#updateActionType').val(row.actionType);
@@ -224,11 +230,14 @@ function updateCaseStep(row){
             alert("数据加载失败");
         }
     })
-
+    //将row和index传入修改按钮的onclick事件中
+    $("#updateButton").one("click",function(){
+        updateStep(row,index);
+    });//为当前元素绑定一次性点击事件
 }
 
 //提交修改操作,更新表格中当前这条记录
-function updateStep(){
+function updateStep(row,index){
     //获取步骤信息
     var updateStepName=$('#updateStepName').val();
     var updateActionType=$('#updateActionType').val();
@@ -243,7 +252,15 @@ function updateStep(){
     }
     //更新记录
     var newdata={stepName:updateStepName,actionType:updateActionType,actionMap:JSON.stringify(updateActionMap)};
-    //$('#caseStepsTable').bootstrapTable('updateRow',{index:1,row: newdata});
-    //更新测试结果这一列的值
+    $('#caseStepsTable').bootstrapTable('updateRow',{index:index,row: newdata});//更新这行记录
     clearActionMap('update');
 }
+
+//显示添加步骤模态框
+function  addCurrentStep(row,index){
+    $('#addStepModal').modal('show');
+    addActionMap();
+    $('#addStepButton').one("click",function () {
+        addStep(index);
+    });
+};

@@ -99,16 +99,17 @@ function logDetailTable(index, row, $detail) {
     });
 }
 
-function searchTestLog(){
+//根据筛选条件查询日志记录
+function searchLog(){
     var params={};
-/*    params.runStartTime=$('#runStartTime').val();
+    params.runStartTime=$('#runStartTime').val();
     params.runEndTime=$('#runEndTime').val();
     params.runUserId=$('#runUserId').val();
-    params.productCategoryId=Number($('#productCategoryId').val());
-    params.runTestName=$('#runTestName').val();
-    params.runMethodName=$('#runMethodName').val();
-    params.runTestParams=$('#runTestParams').val();
-    params.runTestResult=$('#runTestResult').val();*/
+    params.runCaseId=Number($('#runCaseId').val());
+    params.runCaseName=$('#runCaseName').val();
+    params.runCaseType=$('#runCaseType').val();
+    params.runCaseResult=$('#runCaseResult').val();
+
     $.ajax({
         type:"post",
         url:"./TestToolManage/LogList",

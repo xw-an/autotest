@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-xs-3  col-xs-offset-2">
                     <div class="form-group">
-                        <label for="runCaseId">用例id</label>
+                        <label for="runCaseId">用例</label>
                         <input type="text" class="form-control" id="runCaseId">
                     </div>
                 </div>
@@ -75,10 +75,20 @@
                     </div>
                 </div>
             </div>
-
+            <div class="row">
+                <div class="col-xs-3 col-xs-offset-2">
+                    <div class="form-group">
+                        <label for="runCaseResult">运行结果</label>
+                        <select class="form-control" id="runCaseResult">
+                            <option value="Success">Success</option>
+                            <option value="Fail">Fail</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-xs-12 col-xs-offset-6">
-                    <button type="button" class="btn btn-default" onclick="searchTestLog()">查询</button>
+                    <button type="button" class="btn btn-default" onclick="searchLog()">查询</button>
                 </div>
             </div>
         </form>

@@ -72,7 +72,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearActionMap('add')">取消</button>
-                    <button type="button" class="btn btn-primary" onclick="addStep()">新增</button>
+                    <button type="button" class="btn btn-primary" id="addStepButton">新增</button>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearActionMap('update')">取消</button>
-                    <button type="button" class="btn btn-primary" onclick="updateStep()">修改</button>
+                    <button type="button" class="btn btn-primary" id="updateButton">修改</button>
                 </div>
             </div>
         </div>
