@@ -13,35 +13,33 @@
 <head>
     <script type="text/javascript" src="<%=basePath%>/static/plugins/jquery/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="<%=basePath%>/static/js/TestStepManage.js"></script>
+
     <title>配置用例步骤</title>
 </head>
 <body>
     <jsp:include page="commonNavbars.jsp"></jsp:include>
 
-    <!--查询筛选框-->
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-xs-offset-4">
-                    <label for="caseId">用例id:</label>
-                    <input type="text" id="caseId" placeholder="示例:1">
-                    <button class="btn btn-default" onclick="searchStep()">查询</button>
-            </div>
-        </div>
-    </div>
-
     <!--操作按钮项-->
     <div class="container-fluid">
         <div class="row">
-            <div class="btn-group" role="group">
+            <div class="col-xs-12 col-xs-offset-4">
+                <label for="caseId">用例ID:</label>&nbsp;&nbsp;
+                <input type="text" id="caseId" placeholder="示例:1">
+                <button class="btn btn-default" onclick="searchStep()">查询</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="btn-group" role="group" style="padding-left: 15px;">
                 <button type="button" class="btn btn-success" onclick="saveSteps()">保存步骤</button>
                 <button type="button" class="btn btn-danger" onclick="showAddStep()">新增步骤</button>
             </div>
         </div>
-    </div>
-
-    <!-- 表格展示所有测试用例 -->
-    <div class="container-fluid" style="margin-top: 50px;">
-        <table id="caseStepsTable"></table>
+        <div class="row">
+            <!-- 表格展示所有测试用例 -->
+            <div class="container-fluid" style="margin-top: 50px;">
+                <table id="caseStepsTable" style="table-layout:fixed;word-break:break-all; word-wrap:break-all;"></table>
+            </div>
+        </div>
     </div>
 
     <!--添加步骤模态框-->

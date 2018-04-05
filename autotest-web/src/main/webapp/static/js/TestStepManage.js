@@ -13,27 +13,32 @@ $(function(){
             title: '步骤Id',
             valign: 'middle',
             visible: true,
+            width:'5%',
             formatter:function(value,row,index){return index+1}
         },{
             field: 'stepName',
             title: '步骤名',
             valign: 'middle',
+            width:'10%',
             visible: true
         },{
             field: 'actionType',
             title: '动作类型',
             valign: 'middle',
+            width:'10%',
             visible: true
         },{
             field: 'actionMap',
             title: '参数集合',
             valign: 'middle',
+            width:'60%',
             visible: true
         },{
             field: 'operation',
             title: '操作',
             align: 'center',
             valign: 'middle',
+            width:'15%',
             visible: true,
             events: stepOperateEvents,
             formatter: stepOperateFormatter
@@ -56,11 +61,17 @@ window.stepOperateEvents = {
 
 //父表格操作项
 function stepOperateFormatter(value, row, index) {
-    return [
-        '<span class="glyphicon glyphicon-pencil" aria-hidden="true" id="updateCaseStep"></span>&nbsp;'+
-        '<span class="glyphicon glyphicon-trash" aria-hidden="true" id="deleteCaseStep"></span>&nbsp;'+
-        '<span class="glyphicon glyphicon-plus" aria-hidden="true" id="addCurrentStep"></span>&nbsp;'
-    ].join('');
+     return [
+         '<span class="glyphicon glyphicon-pencil" aria-hidden="true" id="updateCaseStep"></span>&nbsp;&nbsp;&nbsp;'+
+         '<span class="glyphicon glyphicon-trash" aria-hidden="true" id="deleteCaseStep"></span>&nbsp;&nbsp;&nbsp;'+
+         '<span class="glyphicon glyphicon-plus" aria-hidden="true" id="addCurrentStep"></span>&nbsp;&nbsp;&nbsp;'
+     ].join('');
+
+    /*return [
+        '<button class="btn btn-xs btn-primary" id="updateCaseStep">更新步骤</button>&nbsp;&nbsp;&nbsp;'+
+        '<button class="btn btn-xs btn-danger" id="deleteCaseStep">删除步骤</button>&nbsp;&nbsp;&nbsp;'+
+        '<button class="btn btn-xs btn-success" id="addCurrentStep">增加步骤</button>&nbsp;&nbsp;&nbsp;'
+    ].join('');*/
 };
 
 //查询该用例下的所有步骤
@@ -147,6 +158,13 @@ function addStep(index){
     //获取步骤信息
     var stepName=$('#stepName').val();
     var actionType=$('#actionType').val();
+    var stepId;
+    if(index == -1){
+        stepId = $('#caseStepsTable').bootstrapTable('getData').length+1;
+    }else{
+        stepId = index + 2;
+    }
+
     //从第三个控件开始获取
     var len=$('#addStepForm .form-group').length;
     var actionMap={};
@@ -156,7 +174,7 @@ function addStep(index){
         actionMap[paramName] = paramValue;
     }
     //往表格中插入一行记录
-    var data={stepName:stepName,actionType:actionType,actionMap:JSON.stringify(actionMap)};
+    var data={stepId:stepId,stepName:stepName,actionType:actionType,actionMap:JSON.stringify(actionMap)};
     if(index!=-1){
         $('#caseStepsTable').bootstrapTable('insertRow',{index:index+1,row:data});
     }else{
@@ -167,8 +185,11 @@ function addStep(index){
 
 //TODO 删除当前步骤
 function deleteCaseStep(row,index) {
-    $("#caseStepsTable tr[data-index='"+index+"']").remove();
-    //$('#caseStepsTable').bootstrapTable('remove', {field: 'state', values:"true"});
+    //$("#caseStepsTable tr[data-index='"+index+"']").remove();
+    $('#caseStepsTable').bootstrapTable('remove', {
+        field: 'stepId',
+        values: [row.stepId]
+    });
 }
 
 //动态显示修改步骤框中的对应动作类型的输入内容
@@ -251,7 +272,7 @@ function updateStep(row,index){
         updateActionMap[paramName] = paramValue;
     }
     //更新记录
-    var newdata={stepName:updateStepName,actionType:updateActionType,actionMap:JSON.stringify(updateActionMap)};
+    var newdata={stepId:row.stepId,stepName:updateStepName,actionType:updateActionType,actionMap:JSON.stringify(updateActionMap)};
     $('#caseStepsTable').bootstrapTable('updateRow',{index:index,row: newdata});//更新这行记录
     clearActionMap('update');
 }
