@@ -2,8 +2,10 @@ package com.autotest.web.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestStepExec;
 import com.autotest.service.bussiness.ITestActionService;
+import com.autotest.service.bussiness.ITestCaseService;
 import com.autotest.service.bussiness.ITestStepExecService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,6 +25,8 @@ public class TestStepController {
     private ITestStepExecService testStepExecService;
     @Autowired
     private ITestActionService testActionService;
+    @Autowired
+    private ITestCaseService testCaseService;
 
     @RequestMapping
     public String showTestStepManage(){
@@ -61,5 +66,26 @@ public class TestStepController {
     public String getActionMap(@PathVariable String actionType){
        Map<String,String> actionParams=testActionService.selectKey(actionType);
        return JSON.toJSONString(actionParams);
+    }
+
+    /**
+     * 保存当前用例的所有步骤
+     * @param caseId
+     * @param steps
+     * @return
+     */
+    @RequestMapping("{caseId}/SaveSteps")
+    @ResponseBody
+    public String saveSteps(@PathVariable int caseId,@RequestBody String steps){
+        TestCase testCase=testCaseService.selectCase(caseId);
+        if(testCase==null||testCase.equals("")) {
+            //用例id不存在，不做插入的功能
+        }else{
+            //TODO
+        }
+
+        System.out.println(caseId);
+        System.out.println(steps);
+        return null;
     }
 }

@@ -183,7 +183,7 @@ function addStep(index){
     clearActionMap('add');
 }
 
-//TODO 删除当前步骤
+// 删除当前步骤
 function deleteCaseStep(row,index) {
     //$("#caseStepsTable tr[data-index='"+index+"']").remove();
     $('#caseStepsTable').bootstrapTable('remove', {
@@ -285,3 +285,21 @@ function  addCurrentStep(row,index){
         addStep(index);
     });
 };
+
+//保存用例
+function saveSteps(){
+    var caseId=parseInt($('#caseId').val());
+    $.ajax({
+        type:"post",
+        url:"./TestStepManage/"+caseId+"/SaveSteps",
+        dataType:"json",
+        contentType: "application/json",
+        traditional: true, //使json格式的字符串不会被转码
+        data:JSON.stringify($('#caseStepsTable').bootstrapTable('getData')),
+        error:function(data){
+            alert(data.msg);
+        },
+        success:function(data){
+        }
+    })
+}
