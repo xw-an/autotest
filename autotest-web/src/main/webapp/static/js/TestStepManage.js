@@ -12,7 +12,8 @@ $(function(){
             field: 'stepId',
             title: '步骤Id',
             valign: 'middle',
-            visible: true
+            visible: true,
+            formatter:function(value,row,index){return index+1}
         },{
             field: 'stepName',
             title: '步骤名',
@@ -42,23 +43,23 @@ $(function(){
 
 //父表格操作项
 window.stepOperateEvents = {
-    'click #addStep': function (e, value, row, index) {
-        //showUpdateCaseModal(row);
+    'click #updateCaseStep': function (e, value, row, index) {
+        updateCaseStep(row);
     },
-    'click #deleteStep': function (e, value, row, index) {
-        //showDeleteCaseModal(row);
+    'click #deleteCaseStep': function (e, value, row, index) {
+        deleteCaseStep(row,index);
     },
-    'click #updateStep': function (e, value, row, index) {
-       // runCase(index,row);
+    'click #addCurrentStep': function (e, value, row, index) {
+        addCurrentStep(row);
     }
 };
 
 //父表格操作项
 function stepOperateFormatter(value, row, index) {
     return [
-        '<button class="btn btn-primary" id="addStep">编辑</button>&nbsp;' +
-        '<button class="btn btn-danger" id="deleteStep">删除</button>&nbsp;' +
-        '<button class="btn btn-success" id="updateStep">运行</button>&nbsp;'
+        '<span class="glyphicon glyphicon-pencil" aria-hidden="true" id="updateCaseStep"></span>&nbsp;'+
+        '<span class="glyphicon glyphicon-trash" aria-hidden="true" id="deleteCaseStep"></span>&nbsp;'+
+        '<span class="glyphicon glyphicon-plus" aria-hidden="true" id="addCurrentStep"></span>&nbsp;'
     ].join('');
 };
 
@@ -86,8 +87,8 @@ function showAddStep(){
     $('#addStepModal').modal('show');
 }
 
-//动态显示对应动作类型的输入内容
-function showActionMap(){
+//动态显示新增步骤框中的对应动作类型的输入内容
+function addActionMap(){
     $('.actionParams').remove();
     var actionType=$('#actionType').val();
     if(actionType=='请选择') return;
@@ -116,6 +117,26 @@ function showActionMap(){
     })
 }
 
+//清空动态文本框
+function clearActionMap(type){
+    if(type=="add"){
+        var len=$('#addStepForm .form-group').length;
+        $('#addStepForm')[0].reset();
+        for(var i=2;i<len;i++){
+            $("#addStepForm .form-group:eq("+i+")").remove();
+        }
+        $('#addStepModal').modal('hide');
+    }else if(type=="update"){
+        var len=$('#updateStepForm .form-group').length;
+        $('#updateStepForm')[0].reset();
+        for(var i=2;i<len;i++){
+            $("#updateStepForm .form-group:eq("+i+")").remove();
+        }
+        $('#updateStepModal').modal('hide');
+    }
+}
+
+
 //对新增步骤提交数据做校验
 //TODO
 
@@ -130,17 +151,99 @@ function addStep(){
     for(var i=2;i<len;i++){
         var paramName=$("#addStepForm .form-group:eq("+i+") input").attr("id");
         var paramValue=$("#addStepForm .form-group:eq("+i+") input").val();
+        actionMap[paramName] = paramValue;
     }
-    //TODO 生成json的actionMap
     //往表格中插入一行记录
-    var data={stepId:1,stepName:stepName,actionType:actionType,actionMap:"test"};
-    //TODO 获取步骤id
-
-    $('#caseStepsTable').bootstrapTable('prepend',data);
-    $('#addStepForm')[0].reset();
-    for(var i=2;i<len;i++){
-        $("#addStepForm .form-group:eq("+i+")").remove();
-    }
-    $('#addStepModal').modal('hide');
+    var data={stepName:stepName,actionType:actionType,actionMap:JSON.stringify(actionMap)};
+    $('#caseStepsTable').bootstrapTable('append',data);
+    clearActionMap('add');
 }
 
+//TODO 删除当前步骤
+function deleteCaseStep(row,index) {
+    $('#caseStepsTable').bootstrapTable('remove', {field: 'stepId', values:row.stepId});
+}
+
+
+//动态显示修改步骤框中的对应动作类型的输入内容
+function updateActionMap(){
+    $('.updateActionParams').remove();
+    var updateActionType=$('#updateActionType').val();
+    if(updateActionType=='请选择') return;
+    //ajax请求获取类型下的所有参数
+    $.ajax({
+        type:"post",
+        url:"./TestStepManage/"+updateActionType+"/getActionParams",
+        dataType:"json",
+        contentType: "application/json",
+        traditional: true, //使json格式的字符串不会被转码
+        success:function(data){
+            for (var key in data)
+            {
+                //界面展示填写项
+                var name=data[key]
+                var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
+                    "<label>"+name+"</label>\n" +
+                    "<input type=\"text\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" placeholder=\""+key+"\">\n" +
+                    "</div>"
+                $('#updateStepForm .form-group').last().append(html);
+            }
+        },
+        error:function(){
+            alert("数据加载失败");
+        }
+    })
+}
+
+//显示修改步骤模态框
+function updateCaseStep(row){
+    $('#updateStepModal').modal('show');
+    $('#updateStepName').val(row.stepName);
+    $('#updateActionType').val(row.actionType);
+    var jsonActionMap=JSON.parse(row.actionMap);
+    //ajax请求获取类型下的所有参数
+    $.ajax({
+        type:"post",
+        url:"./TestStepManage/"+row.actionType+"/getActionParams",
+        dataType:"json",
+        contentType: "application/json",
+        traditional: true, //使json格式的字符串不会被转码
+        success:function(data){
+            for (var key in data)
+            {
+                //界面展示填写项
+                var name=data[key]
+                var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
+                    "<label>"+name+"</label>\n" +
+                    "<input type=\"text\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" value=\""+jsonActionMap[key]+"\">\n" +
+                    "</div>"
+                $('#updateStepForm .form-group').last().append(html);
+            }
+        },
+        error:function(){
+            alert("数据加载失败");
+        }
+    })
+
+}
+
+//提交修改操作,更新表格中当前这条记录
+function updateStep(){
+    //获取步骤信息
+    var updateStepName=$('#updateStepName').val();
+    var updateActionType=$('#updateActionType').val();
+    //从第三个控件开始获取
+    var len=$('#updateStepForm .form-group').length;
+    var updateActionMap={};
+    for(var i=2;i<len;i++){
+        var paramName=$("#updateStepForm .form-group:eq("+i+") input").attr("id");
+        var paramValue=$("#updateStepForm .form-group:eq("+i+") input").val();
+        paramName=paramName.substring("update".length);
+        updateActionMap[paramName] = paramValue;
+    }
+    //更新记录
+    var newdata={stepName:updateStepName,actionType:updateActionType,actionMap:JSON.stringify(updateActionMap)};
+    //$('#caseStepsTable').bootstrapTable('updateRow',{index:1,row: newdata});
+    //更新测试结果这一列的值
+    clearActionMap('update');
+}

@@ -60,7 +60,7 @@
                         </div>
                         <div class="form-group" id="actionTypeGroup">
                             <label>动作类型</label>
-                            <select class="form-control" id="actionType" onchange="showActionMap()">
+                            <select class="form-control" id="actionType" onchange="addActionMap()">
                                 <option value="请选择">请选择</option>
                                 <option value="db">数据库</option>
                                 <option value="callInterface">接口</option>
@@ -71,12 +71,47 @@
                     </form>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearActionMap('add')">取消</button>
                     <button type="button" class="btn btn-primary" onclick="addStep()">新增</button>
                 </div>
             </div>
         </div>
     </div>
+
+    <!--修改步骤模态框-->
+    <div class="modal fade" id="updateStepModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="updateTitle">修改步骤</h4>
+                </div>
+                <div class="modal-body">
+                    <form id="updateStepForm">
+                        <div class="form-group" id="updateNameGroup">
+                            <label>步骤名称</label>
+                            <input type="text" class="form-control" name="updateStepName" id="updateStepName">
+                        </div>
+                        <div class="form-group" id="updateActionTypeGroup">
+                            <label>动作类型</label>
+                            <select class="form-control" id="updateActionType" onchange="updateActionMap()">
+                                <option value="请选择">请选择</option>
+                                <option value="db">数据库</option>
+                                <option value="callInterface">接口</option>
+                                <option value="checkValue">验证</option>
+                                <option value="setParameter">设置变量</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearActionMap('update')">取消</button>
+                    <button type="button" class="btn btn-primary" onclick="updateStep()">修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 </body>
 </html>
