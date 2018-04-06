@@ -12,6 +12,7 @@ import org.springframework.expression.*;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
 import org.springframework.expression.spel.support.StandardEvaluationContext;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -51,6 +52,7 @@ public class TestActionService implements ITestActionService {
      * @return
      */
     @Override
+    @Transactional
     public boolean execDb(Map<String, Object> dbMaps) {
         String url = dbMaps.get("conn").toString();
         String username = dbMaps.get("username").toString();
@@ -122,6 +124,7 @@ public class TestActionService implements ITestActionService {
      * @return
      */
     @Override
+    @Transactional
     public boolean execCallInterface(Map<String, Object> callInterfaceMaps) {
         String reqType = (String) callInterfaceMaps.get("reqType");
         String parameterName = (String) callInterfaceMaps.get("parameterName");
@@ -153,6 +156,7 @@ public class TestActionService implements ITestActionService {
      * @return
      */
     @Override
+    @Transactional
     public boolean execCheckValue(Map<String, Object> checkValueMaps) {
         int type = Integer.parseInt(checkValueMaps.get("type").toString());
         String expectValue = checkValueMaps.get("expectValue").toString();
@@ -206,6 +210,7 @@ public class TestActionService implements ITestActionService {
     }
 
     @Override
+    @Transactional
     public boolean execSetParameter(Map<String, Object> setParameterMaps) {
         String parameterName = setParameterMaps.get("parameterName").toString();
         String parameterValue = setParameterMaps.get("parameterValue").toString();

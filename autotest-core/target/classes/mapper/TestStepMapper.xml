@@ -16,7 +16,7 @@
         where id=#{id}
     </update>
 
-    <insert id="insert" parameterType="TestStep">
+    <insert id="insert" parameterType="TestStep" useGeneratedKeys="true"  keyProperty="id" keyColumn="id">
         insert into test_step(case_id,step_name,action_type,dataChange_CreateTime,dataChange_LastTime)
         values(#{case_id},#{step_name},#{action_type},now(),now());
     </insert>

@@ -76,7 +76,12 @@ function stepOperateFormatter(value, row, index) {
 
 //查询该用例下的所有步骤
 function searchStep(){
-    var searchParams={caseId:$('#caseId').val().trim()};
+    var caseId=$('#caseId').val();
+    if(caseId == "" || caseId == undefined || caseId == null){
+        alert("请输入用例id");
+        return;
+    }
+    var searchParams={caseId:caseId.trim()};
     $.ajax({
         type:"post",
         url:"./TestStepManage/caseSteps",
@@ -85,10 +90,21 @@ function searchStep(){
         traditional: true, //使json格式的字符串不会被转码
         data:JSON.stringify(searchParams),
         success:function(data){
-            $('#caseStepsTable').bootstrapTable('load',data);
+            if(data.result){
+                var content=data.content;
+                if(content == "" || content == undefined || content == null){
+                    $('#caseStepsTable').bootstrapTable('removeAll');
+                } else{
+                    $('#caseStepsTable').bootstrapTable('load',JSON.parse(content));
+                }
+            }else{
+                alert(data.message);
+            }
+
         },
-        error:function(){
+        error:function(data){
             $('#caseStepsTable').bootstrapTable('removeAll');
+
         }
     })
 }
@@ -288,7 +304,11 @@ function  addCurrentStep(row,index){
 
 //保存用例
 function saveSteps(){
-    var caseId=parseInt($('#caseId').val());
+    var caseId=$('#caseId').val();
+    if(caseId == "" || caseId == undefined || caseId == null){
+        alert("请先输入用例id");
+        return;
+    }
     $.ajax({
         type:"post",
         url:"./TestStepManage/"+caseId+"/SaveSteps",
@@ -300,6 +320,12 @@ function saveSteps(){
             alert(data.msg);
         },
         success:function(data){
+            if(!data.result){
+                alert(data.msg);
+            }else{
+                alert("保存成功");
+                $('#caseStepsTable').modal('refresh');
+            }
         }
     })
 }

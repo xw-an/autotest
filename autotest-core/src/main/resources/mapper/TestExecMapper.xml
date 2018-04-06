@@ -10,14 +10,17 @@
 
     <update id="update" parameterType="TestExec">
         update test_exec
-        set actionType = #{actionType},
-        keyName = #{keyName}
+        set case_id = #{case_id},
+        step_id=#{step_id},
+        action_type = #{action_type},
+        action_key = #{action_key},
+        action_value= #{action_value}
         where id=#{id}
     </update>
 
     <insert id="insert" parameterType="TestExec">
-        insert into test_exec(actionType,keyName,dataChange_CreateTime,dataChange_LastTime)
-        values(#{actionType},#{keyName},now(),now());
+        insert into test_exec(case_id,step_id,action_type,action_key,action_value,dataChange_CreateTime,dataChange_LastTime)
+        values(#{case_id},#{step_id},#{action_type},#{action_key},#{action_value},now(),now());
     </insert>
 
     <select id="select" parameterType="int" resultType="TestExec">

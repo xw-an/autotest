@@ -7,6 +7,7 @@ import com.autotest.core.model.TestStep;
 import com.autotest.core.model.TestStepExec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -27,6 +28,7 @@ public class TestStepExecService implements ITestStepExecService {
      * @return 返回执行结果
      */
     @Override
+    @Transactional
     public boolean deleteStepExec(int caseId) {
         try {
             tsDao.delete(caseId);
@@ -45,6 +47,7 @@ public class TestStepExecService implements ITestStepExecService {
      * @return 返回执行结果
      */
     @Override
+    @Transactional
     public boolean saveStepExec(int caseId, List<TestStepExec> ltStepExec) {
         try {
             /*
@@ -61,16 +64,17 @@ public class TestStepExecService implements ITestStepExecService {
                     tStep.setStep_name(tStepExec.getStepName());
                     tStep.setAction_type(tStepExec.getActionType());
                     tsDao.insert(tStep);//插入步骤
+                    int step_id=tStep.getId();
                     TestExec tExec=new TestExec();
                     tExec.setCase_id(caseId);
-                    tExec.setStep_id(tStepExec.getstepId());
+                    tExec.setStep_id(step_id);
                     tExec.setAction_type(tStepExec.getActionType());
                     Map<String,String> actionMap=tStepExec.getActionMap();
                     for(String k:actionMap.keySet()){
                         tExec.setAction_key(k);
                         tExec.setAction_value(actionMap.get(k));
+                        teDao.insert(tExec);//插入执行内容
                     }
-                    teDao.insert(tExec);//插入执行内容
                 }
                 return true;
             }else {

@@ -1,6 +1,7 @@
 package com.autotest.web.controller;
 
 import com.alibaba.fastjson.JSON;
+import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestStepExec;
@@ -41,20 +42,36 @@ public class TestStepController {
     @RequestMapping("/caseSteps")
     @ResponseBody
     public String showCaseSteps(@RequestBody JSONObject searchParams){
-        if(searchParams.getString("caseId")==null) return null;
+        if(!searchParams.containsKey("caseId")) return null;
+        JSONObject searchResult=new JSONObject();
         int caseId=Integer.parseInt(searchParams.getString("caseId"));
-        List<TestStepExec> ltStepExec=testStepExecService.selectStepExec(caseId);
-        if(ltStepExec==null) return null;
-        List<JSONObject> lsteps=new ArrayList<>();
-        for(TestStepExec tStepExec:ltStepExec){
-            JSONObject jo=new JSONObject();
-            jo.put("stepId",String.valueOf(tStepExec.getstepId()));
-            jo.put("stepName",tStepExec.getStepName());
-            jo.put("actionType",tStepExec.getActionType());
-            jo.put("actionMap", JSON.toJSONString(tStepExec.getActionMap()));
-            lsteps.add(jo);
+        try {
+            testCaseService.selectCase(caseId);
+            List<TestStepExec> ltStepExec=testStepExecService.selectStepExec(caseId);
+            if(ltStepExec==null){
+                searchResult.put("result",true);
+                searchResult.put("content",null);
+                return JSONObject.toJSONString(searchResult);
+            }else{
+                List<JSONObject> lsteps=new ArrayList<>();
+                for(TestStepExec tStepExec:ltStepExec){
+                    JSONObject jo=new JSONObject();
+                    jo.put("stepId",String.valueOf(tStepExec.getstepId()));
+                    jo.put("stepName",tStepExec.getStepName());
+                    jo.put("actionType",tStepExec.getActionType());
+                    jo.put("actionMap", JSON.toJSONString(tStepExec.getActionMap()));
+                    lsteps.add(jo);
+                }
+                searchResult.put("result",true);
+                searchResult.put("content",JSON.toJSONString(lsteps));
+                return JSONObject.toJSONString(searchResult);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+            searchResult.put("result",false);
+            searchResult.put("message","当前用例id:"+caseId+"不存在");
+            return JSONObject.toJSONString(searchResult);
         }
-        return JSON.toJSONString(lsteps);
     }
 
     /**
@@ -76,16 +93,28 @@ public class TestStepController {
      */
     @RequestMapping("{caseId}/SaveSteps")
     @ResponseBody
-    public String saveSteps(@PathVariable int caseId,@RequestBody String steps){
+    public String saveSteps(@PathVariable int caseId,@RequestBody List<JSONObject> steps){
+        JSONObject jsonResult=new JSONObject();
         TestCase testCase=testCaseService.selectCase(caseId);
         if(testCase==null||testCase.equals("")) {
             //用例id不存在，不做插入的功能
+            jsonResult.put("result",false);
+            jsonResult.put("msg","当前测试用例id不存在");
+           return JSONObject.toJSONString(jsonResult);
         }else{
-            //TODO
+            List<TestStepExec> ltestStepExec=new ArrayList<>();
+            for(JSONObject s:steps){
+                TestStepExec testStepExec=new TestStepExec();
+                //testStepExec.setstepId(Integer.parseInt(s.getString("stepId")));
+                testStepExec.setStepName(s.getString("stepName"));
+                testStepExec.setActionType(s.getString("actionType"));
+                String actionMap=s.getString("actionMap");
+                testStepExec.setActionMap(JSON.parseObject(actionMap,Map.class));
+                ltestStepExec.add(testStepExec);
+            }
+            boolean result=testStepExecService.saveStepExec(caseId,ltestStepExec);
+            jsonResult.put("result",result);
+            return JSONObject.toJSONString(jsonResult);
         }
-
-        System.out.println(caseId);
-        System.out.println(steps);
-        return null;
     }
 }

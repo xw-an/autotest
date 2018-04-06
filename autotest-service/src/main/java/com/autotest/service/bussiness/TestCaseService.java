@@ -8,6 +8,7 @@ import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestStepExec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -29,6 +30,7 @@ public class TestCaseService implements ITestCaseService {
     private ITestActionService tActionService;
 
     @Override
+    @Transactional
     public boolean addCase(TestCase tcase) {
         try {
             tcDao.insert(tcase);
@@ -40,6 +42,7 @@ public class TestCaseService implements ITestCaseService {
     }
 
     @Override
+    @Transactional
     public boolean updateCase(TestCase tcase) {
         TestCase tc=tcDao.select(tcase.getId());
         if(tc==null||tc.equals("")) throw new FailException("要更新的用例不存在");
@@ -53,6 +56,7 @@ public class TestCaseService implements ITestCaseService {
     }
 
     @Override
+    @Transactional
     public boolean deleteCase(int caseId) {
         TestCase tc=tcDao.select(caseId);
         if(tc==null||tc.equals("")) throw new FailException("要删除的用例不存在");
