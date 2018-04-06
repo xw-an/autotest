@@ -1,5 +1,6 @@
 package com.autotest.core.test;
 
+import com.autotest.core.dao.ITestResult;
 import com.autotest.core.util.HttpClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,6 +14,8 @@ import java.util.Map;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath*:applicationContext.xml"})
 public class TestUtil {
+    @Autowired
+    private ITestResult testResult;
 
     @Test
     public void testHttpClient(){
@@ -22,5 +25,11 @@ public class TestUtil {
         maps.put("reqHeader",new HashMap<>());
         maps.put("parameterName","respResult");
         System.out.println(HttpClient.getResponseByJson(maps));
+    }
+
+    @Test
+    public void testResult(){
+        int caseId=1;
+        testResult.select(caseId);
     }
 }
