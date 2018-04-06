@@ -22,11 +22,11 @@
         insert into test_result(case_id,result,userId,dataChange_CreateTime,dataChange_LastTime)
         VALUES(#{case_id},#{result},#{userId},now(),now())
     </insert>
-    <select id="list" parameterType="Map" resultType="TestResult">
+    <select id="list" parameterType="Map" resultType="TestResultCase">
         select tr.id,tc.id as caseId,tr.result,tr.userId,tr.dataChange_CreateTime,tc.testScenariosName,tc.testScenariosType from test_result as tr
         join test_case as tc on tr.case_id=tc.id
         <where>
-            <if test="caseId!=null and caseId!=''">
+            <if test="caseId!=null and caseId>0">
               case_id=#{caseId}
             </if>
             <if test="result!=null and result!=''">
@@ -36,10 +36,10 @@
                 and userId=#{userId}
             </if>
             <if test="runStartTime!=null and runStartTime!=''">
-                and dataChange_CreateTime&gt;=#{runStartTime}
+                and tr.dataChange_CreateTime&gt;=#{runStartTime}
             </if>
             <if test="runEndTime!=null and runEndTime!=''">
-                and dataChange_CreateTime&lt;=#{runEndTime}
+                and tr.dataChange_CreateTime&lt;=#{runEndTime}
             </if>
             <if test="caseName!=null and caseName!=''">
                 and testScenariosName=#{caseName}

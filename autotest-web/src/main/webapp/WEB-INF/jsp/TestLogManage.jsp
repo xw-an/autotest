@@ -49,7 +49,7 @@
                     <div class="form-group">
                         <label for="runUserId">执行人</label>
                         <select class="form-control" id="runUserId">
-                            <option value="">全部</option>
+                            <option value="All">全部</option>
                             <option value="HQ001">薛伟</option>
                         </select>
                     </div>
@@ -58,7 +58,7 @@
             <div class="row">
                 <div class="col-xs-3  col-xs-offset-2">
                     <div class="form-group">
-                        <label for="runCaseId">用例</label>
+                        <label for="runCaseId">用例Id</label>
                         <input type="text" class="form-control" id="runCaseId">
                     </div>
                 </div>
@@ -80,6 +80,7 @@
                     <div class="form-group">
                         <label for="runCaseResult">运行结果</label>
                         <select class="form-control" id="runCaseResult">
+                            <option value="All">全部</option>
                             <option value="Success">Success</option>
                             <option value="Fail">Fail</option>
                         </select>

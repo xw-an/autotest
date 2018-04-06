@@ -1,8 +1,8 @@
 $(function(){
     //父表格展示对应测试用例的执行记录
     $('#testLogTable').bootstrapTable({
-        method:"post",
-        url: "./TestToolManage/LogList",
+        method:"get",
+        url: "./TestLogManage/LogList",
         dataType:"json",
         cache: false,
         striped: true,
@@ -72,10 +72,10 @@ function resultCellStyle(value,row,index,field){
 
 //子表格展示日志详细信息
 function logDetailTable(index, row, $detail) {
-    var execId=row.execId;
+    var execId=row.id;
     var cur_table = $detail.html('<table></table>').find('table');
     $(cur_table).bootstrapTable({
-        url: "./TestToolManage/LogDetail/"+execId,
+        url: "./TestLogManage/LogDetail/"+execId,
         method: 'post',
         cache: false,
         striped: true,
@@ -104,7 +104,7 @@ function searchLog(){
     var params={};
     params.runStartTime=$('#runStartTime').val();
     params.runEndTime=$('#runEndTime').val();
-    params.runUserId=$('#runUserId').val();
+    params.runUserId=$('#runUserId').val();;
     params.runCaseId=Number($('#runCaseId').val());
     params.runCaseName=$('#runCaseName').val();
     params.runCaseType=$('#runCaseType').val();
@@ -112,7 +112,7 @@ function searchLog(){
 
     $.ajax({
         type:"post",
-        url:"./TestToolManage/LogList",
+        url:"./TestLogManage/LogList",
         data:JSON.stringify(params),
         dataType:"json",
         contentType: "application/json",

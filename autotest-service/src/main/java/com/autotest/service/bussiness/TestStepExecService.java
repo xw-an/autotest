@@ -99,7 +99,10 @@ public class TestStepExecService implements ITestStepExecService {
         if(ltStep.size()<1) return null;
         for(TestStep ts:ltStep){
             Map<String,String> actionMaps=new HashMap<>();
-            List<TestExec> ltExec= teDao.selectList(caseId,ts.getId());//根据操作类型查询对应key,value
+            Map<String,Object> parameters=new HashMap<>();
+            parameters.put("stepId",ts.getId());
+            parameters.put("caseId",caseId);
+            List<TestExec> ltExec= teDao.selectList(parameters);//根据操作类型查询对应key,value
             for(TestExec te:ltExec){
                 actionMaps.put(te.getAction_key(),te.getAction_value());
             }

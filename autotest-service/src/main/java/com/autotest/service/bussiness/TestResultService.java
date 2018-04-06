@@ -2,6 +2,7 @@ package com.autotest.service.bussiness;
 
 import com.autotest.core.dao.ITestResult;
 import com.autotest.core.model.TestResult;
+import com.autotest.core.model.TestResultCase;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -13,7 +14,7 @@ public class TestResultService implements ITestResultService{
     private ITestResult tResultDao;
 
     @Override
-    public List<TestResult> listResult(Map<String, Object> params) {
+    public List<TestResultCase> listResult(Map<String, Object> params) {
         return tResultDao.list(params);
     }
 
