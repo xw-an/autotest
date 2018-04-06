@@ -13,5 +13,6 @@ public interface ITestResult {
     public void delete();
     public void update(TestResult tResult);
     public void insert(TestResult tResult);
+
     public List<TestResult> list(Map<String,Object> params);
 }
