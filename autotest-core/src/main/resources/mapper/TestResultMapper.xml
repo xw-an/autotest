@@ -8,6 +8,45 @@
     <select id="select" parameterType="int" resultType="TestResult">
         SELECT * FROM test_result where case_id=#{caseId}
     </select>
-
-
+    <delete id="delete" parameterType="int">
+        delete from test_result where id=#{id}
+    </delete>
+    <update id="update" parameterType="TestResult">
+        update test_result
+        set case_id = #{case_id},
+        result = #{result},
+        userId = #{userId}
+        where id = #{id}
+    </update>
+    <insert id="insert" parameterType="TestResult">
+        insert into test_result(case_id,result,userId,dataChange_CreateTime,dataChange_LastTime)
+        VALUES(#{case_id},#{result},#{userId},now(),now())
+    </insert>
+    <select id="list" parameterType="Map" resultType="TestResult">
+        select tr.id,tc.id as caseId,tr.result,tr.userId,tr.dataChange_CreateTime,tc.testScenariosName,tc.testScenariosType from test_result as tr
+        join test_case as tc on tr.case_id=tc.id
+        <where>
+            <if test="caseId!=null and caseId!=''">
+              case_id=#{caseId}
+            </if>
+            <if test="result!=null and result!=''">
+                and result=#{result}
+            </if>
+            <if test="userId!=null and userId!=''">
+                and userId=#{userId}
+            </if>
+            <if test="runStartTime!=null and runStartTime!=''">
+                and dataChange_CreateTime&gt;=#{runStartTime}
+            </if>
+            <if test="runEndTime!=null and runEndTime!=''">
+                and dataChange_CreateTime&lt;=#{runEndTime}
+            </if>
+            <if test="caseName!=null and caseName!=''">
+                and testScenariosName=#{caseName}
+            </if>
+            <if test="caseType!=null and caseType!=''">
+                and testScenariosType=#{caseType}
+            </if>
+        </where>
+    </select>
 </mapper>

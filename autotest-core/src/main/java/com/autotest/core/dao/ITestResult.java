@@ -1,18 +1,22 @@
 package com.autotest.core.dao;
 
+import com.autotest.core.annotation.DataSource;
 import com.autotest.core.model.TestResult;
+import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;
 
-@Repository
 public interface ITestResult {
-
+    @DataSource("Mysql_autotest")
     public TestResult select(int caseId);
-    public void delete();
+    @DataSource("Mysql_autotest")
+    public void delete(int id);
+    @DataSource("Mysql_autotest")
     public void update(TestResult tResult);
+    @DataSource("Mysql_autotest")
     public void insert(TestResult tResult);
-
+    @DataSource("Mysql_autotest")
     public List<TestResult> list(Map<String,Object> params);
 }

@@ -36,7 +36,7 @@ public class ReflectBean_mysql {
 	//sqlserver jdbc的java包驱动字符串
 	private String driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 */	//数据库中的表名
-	String table = "test_action";
+	String table = "test_result";
 	//输出文件目录
 	String outPath="src/main/java/com/autotest/model/"+table+".java";
 	//数据库的列名称

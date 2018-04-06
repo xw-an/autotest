@@ -13,8 +13,14 @@ $(function(){
         detailView:true,
         onExpandRow:logDetailTable,
         columns: [{
-            field: 'execId',
-            title: '执行Id',
+            field: 'id',
+            title: 'id',
+            align: 'center',
+            valign: 'middle',
+            visible: true
+        },{
+            field: 'caseId',
+            title: '用例Id',
             align: 'center',
             valign: 'middle',
             visible: true
@@ -25,25 +31,19 @@ $(function(){
             valign: 'middle',
             visible: true
         },{
-            field: 'runCaseId',
-            title: '用例ID',
-            align: 'center',
-            valign: 'middle',
-            visible: true
-        },{
-            field: 'runCaseName',
+            field: 'testScenariosName',
             title: '用例名',
             align: 'center',
             valign: 'middle',
             visible: true
         },{
-            field: 'runCaseType',
+            field: 'testScenariosType',
             title: '用例类型',
             align: 'center',
             valign: 'middle',
             visible: true
         },{
-            field: 'runCaseResult',
+            field: 'result',
             title: '运行结果',
             align: 'center',
             valign: 'middle',
