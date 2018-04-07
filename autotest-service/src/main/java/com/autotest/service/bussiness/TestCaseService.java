@@ -5,6 +5,7 @@ import com.autotest.core.dao.ITestExec;
 import com.autotest.core.dao.ITestStep;
 import com.autotest.core.model.FailException;
 import com.autotest.core.model.TestCase;
+import com.autotest.core.model.TestResult;
 import com.autotest.core.model.TestStepExec;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,6 +29,8 @@ public class TestCaseService implements ITestCaseService {
     private ITestStepExecService tStepExecService;
     @Autowired
     private ITestActionService tActionService;
+    @Autowired
+    private ITestResultService tResultService;
 
     @Override
     @Transactional
@@ -96,29 +99,42 @@ public class TestCaseService implements ITestCaseService {
     public boolean runTestCase(int caseId) {
         boolean resultStatus=false;
         List<TestStepExec> ltStepExec=tStepExecService.selectStepExec(caseId);
-        if(ltStepExec==null) return true;
-        for(TestStepExec tStepExec:ltStepExec){
-            String actionType=tStepExec.getActionType();
-            String methodName="exec"+actionType.substring(0,1).toUpperCase()+actionType.substring(1);
-            try {
+        if(ltStepExec==null){
+            resultStatus=true;
+        }
+        else{
+            for(TestStepExec tStepExec:ltStepExec){
+                String actionType=tStepExec.getActionType();
+                String methodName="exec"+actionType.substring(0,1).toUpperCase()+actionType.substring(1);
+                try {
                 /*
                 根据类型名称反射调用对应类型的方法执行
                  */
-                Method m=tActionService.getClass().getMethod(methodName,Map.class);
-                resultStatus=(boolean) m.invoke(tActionService,tStepExec.getActionMap());
-            } catch (NoSuchMethodException e) {
-                e.printStackTrace();
-                resultStatus=false;
-            } catch (IllegalAccessException e) {
-                e.printStackTrace();
-                resultStatus=false;
-            } catch (InvocationTargetException e) {
-                e.printStackTrace();
-                resultStatus=false;
-            }finally {
-                if(!resultStatus) return false;
+                    Method m=tActionService.getClass().getMethod(methodName,Map.class);
+                    resultStatus=(boolean) m.invoke(tActionService,tStepExec.getActionMap());
+                } catch (NoSuchMethodException e) {
+                    e.printStackTrace();
+                    resultStatus=false;
+                } catch (IllegalAccessException e) {
+                    e.printStackTrace();
+                    resultStatus=false;
+                } catch (InvocationTargetException e) {
+                    e.printStackTrace();
+                    resultStatus=false;
+                }
             }
         }
+
+        //插入运行结果表
+        TestResult tResult=new TestResult();
+        tResult.setCase_id(caseId);
+        if(resultStatus){
+            tResult.setResult("Success");
+        }else{
+            tResult.setResult("Fail");
+        }
+        tResult.setUserId("HQ001");//TODO 需要根据session获取
+        tResultService.insert(tResult);
         return resultStatus;
     }
 }
