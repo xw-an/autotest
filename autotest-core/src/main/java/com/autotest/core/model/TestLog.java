@@ -5,6 +5,7 @@ import java.sql.Timestamp;
 public class TestLog {
 
     private int id;
+    private int result_id;
     private int case_id;
     private int step_id;
     private String runParams;
@@ -17,6 +18,7 @@ public class TestLog {
     public String toString() {
         return "TestLog{" +
                 "id=" + id +
+                ", result_id=" + result_id +
                 ", case_id=" + case_id +
                 ", step_id=" + step_id +
                 ", runParams='" + runParams + '\'' +
@@ -33,6 +35,14 @@ public class TestLog {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    public int getResult_id() {
+        return result_id;
+    }
+
+    public void setResult_id(int result_id) {
+        this.result_id = result_id;
     }
 
     public int getCase_id() {
