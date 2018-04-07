@@ -7,6 +7,7 @@ import java.util.Map;
 public interface ITestLog {
 
     public void insert(TestLog tLog);
-    public List<TestLog> list(Map<String,String> parameters);
+    public List<TestLog> list(Map<String,Object> parameters);
     public void update(TestLog tlog);
+    public void updateResultId(Map<String,Object> parameters);
 }

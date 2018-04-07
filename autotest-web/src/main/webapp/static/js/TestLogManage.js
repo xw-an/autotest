@@ -72,15 +72,25 @@ function resultCellStyle(value,row,index,field){
 
 //子表格展示日志详细信息
 function logDetailTable(index, row, $detail) {
-    var execId=row.id;
+    var resultId=row.id;
     var cur_table = $detail.html('<table></table>').find('table');
     $(cur_table).bootstrapTable({
-        url: "./TestLogManage/LogDetail/"+execId,
+        url: "./TestLogManage/LogDetail/"+resultId,
         method: 'post',
         cache: false,
         striped: true,
         pageSize: 10,
         columns: [{
+            field: 'step_id',
+            title: '步骤id',
+            valign: 'middle',
+            visible: true
+        },{
+            field: 'runParams',
+            title: '运行参数',
+            valign: 'middle',
+            visible: true
+        },{
             field: 'logContent',
             title: '日志内容',
             valign: 'middle',

@@ -2,8 +2,11 @@ package com.autotest.web.controller;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
+import com.alibaba.fastjson.serializer.SerializerFeature;
+import com.autotest.core.model.TestLog;
 import com.autotest.core.model.TestResult;
 import com.autotest.core.model.TestResultCase;
+import com.autotest.service.bussiness.ITestLogService;
 import com.autotest.service.bussiness.ITestResultService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -18,18 +21,33 @@ import java.util.Map;
 public class TestLogController {
     @Autowired
     private ITestResultService testResultService;
+    @Autowired
+    private ITestLogService testLogService;
 
+    /**
+     * 页面跳转到TestLogManage.jsp
+     * @return
+     */
     @RequestMapping
     public String showTestLog(){
         return "TestLogManage";
     }
 
+    /**
+     * 第一次表格get请求
+     * @return
+     */
     @RequestMapping(value = "/LogList",method = RequestMethod.GET)
     @ResponseBody
     public String showLogList(){
         return null;
     }
 
+    /**
+     * 根据筛选条件post获取表格数据
+     * @param logParams
+     * @return
+     */
     @RequestMapping(value = "/LogList",method = RequestMethod.POST)
     @ResponseBody
     public String showLogList(@RequestBody JSONObject logParams){
@@ -54,9 +72,15 @@ public class TestLogController {
         return JSON.toJSONString(testResultList);
     }
 
-    @RequestMapping("/LogDetail")
+    /**
+     * 根据父表格的resultId获取子表的数据
+     * @param resultId
+     * @return
+     */
+    @RequestMapping("/LogDetail/{resultId}")
     @ResponseBody
-    public String showLogDetail(@PathVariable String execId){
-        return null;
+    public String showLogDetail(@PathVariable String resultId){
+        List<TestLog> ltestLog=testLogService.selectByResultId(Integer.parseInt(resultId));
+        return JSON.toJSONString(ltestLog,SerializerFeature.WriteDateUseDateFormat);
     }
 }
