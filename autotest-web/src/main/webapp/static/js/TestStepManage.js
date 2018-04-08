@@ -132,13 +132,24 @@ function addActionMap(){
         success:function(data){
             for (var key in data)
             {
-                //界面展示填写项
-                var name=data[key]
-                var html="<div class=\"form-group actionParams\" id=\""+key+"Group\">\n" +
-                    "<label>"+name+"</label>\n" +
-                    "<input type=\"text\" class=\"form-control\" name=\""+key+"\" id=\""+key+"\" placeholder=\""+key+"\">\n" +
-                    "</div>"
-                $('#addStepForm .form-group').last().append(html);
+                /*界面动态展示填写项
+                需要根据类型判断是用input还是textarea
+                 */
+                var keyNames=['sql','reqData','reqHeader'];//这三种类型需要用textarea，其他用input
+                if(keyNames.indexOf(key)!=-1){
+                    var name=data[key]
+                    var html="<div class=\"form-group actionParams\" id=\""+key+"Group\">\n" +
+                        "<label>"+name+"</label>\n" +
+                        "<textarea class=\"form-control\" name=\""+key+"\" id=\""+key+"\" placeholder=\""+key+"\"></textarea>\n" +
+                        "</div>"
+                }else{
+                    var name=data[key]
+                    var html="<div class=\"form-group actionParams\" id=\""+key+"Group\">\n" +
+                        "<label>"+name+"</label>\n" +
+                        "<input type=\"text\" class=\"form-control\" name=\""+key+"\" id=\""+key+"\" placeholder=\""+key+"\">\n" +
+                        "</div>"
+                }
+                $('#addStepForm .form-group').last().after(html);
             }
         },
         error:function(){
@@ -152,9 +163,10 @@ function clearActionMap(type){
     if(type=="add"){
         var len=$('#addStepForm .form-group').length;
         $('#addStepForm')[0].reset();
-        for(var i=2;i<len;i++){
+/*        for(var i=2;i<len;i++){
             $("#addStepForm .form-group:eq("+i+")").remove();
-        }
+        }*/
+        $('.actionParams').remove();
         $('#addStepModal').modal('hide');
     }else if(type=="update"){
         var len=$('#updateStepForm .form-group').length;
@@ -185,8 +197,16 @@ function addStep(index){
     var len=$('#addStepForm .form-group').length;
     var actionMap={};
     for(var i=2;i<len;i++){
-        var paramName=$("#addStepForm .form-group:eq("+i+") input").attr("id");
-        var paramValue=$("#addStepForm .form-group:eq("+i+") input").val();
+        /*
+        需要判断是获取input还是textarea的值
+         */
+        if($("#addStepForm .form-group:eq("+i+") input").length>0){
+            var paramName=$("#addStepForm .form-group:eq("+i+") input").attr("id");
+            var paramValue=$("#addStepForm .form-group:eq("+i+") input").val();
+        }else{
+            var paramName=$("#addStepForm .form-group:eq("+i+") textarea").attr("id");
+            var paramValue=$("#addStepForm .form-group:eq("+i+") textarea").val();
+        }
         actionMap[paramName] = paramValue;
     }
     //往表格中插入一行记录
