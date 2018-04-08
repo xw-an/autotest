@@ -38,6 +38,7 @@ public class HttpClient {
             for(String h:headers.keySet()){
                 httpPost.setHeader(h,headers.get(h));
             }
+            //TODO 请求报文中需要替换的参数
             StringEntity reqEntity=new StringEntity((String)maps.get("reqData"));
             reqEntity.setContentEncoding("UTF-8");
             httpPost.setEntity(reqEntity);

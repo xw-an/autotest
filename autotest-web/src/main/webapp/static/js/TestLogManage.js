@@ -84,39 +84,64 @@ function logDetailTable(index, row, $detail) {
             field: 'className',
             title: '类名',
             valign: 'middle',
+            width:'5%',
             visible: true
         },{
             field: 'methodName',
             title: '方法名',
             valign: 'middle',
+            width:'5%',
             visible: true
         },{
             field: 'runParams',
             title: '运行参数',
             valign: 'middle',
+            width:'35%',
             visible: true
         },{
             field: 'logContent',
             title: '日志内容',
             valign: 'middle',
+            width:'35%',
             visible: true
         },{
             field: 'logLevel',
             title: '日志级别',
             valign: 'middle',
-            visible: true
+            visible: true,
+            width:'5%',
+            cellStyle:LevelCellStyle
         },{
             field: 'remark',
             title: '备注信息',
             valign: 'middle',
+            width:'10%',
             visible: true
         },{
             field: 'dataChange_CreateTime',
             title: '创建时间',
             valign: 'middle',
+            width:'5%',
             visible: true
         }],
     });
+}
+
+//日志级别状态展示
+function LevelCellStyle(value,row,index,field){
+    if(value=="ERROR"){
+        return {
+            css:{"color":"red","font-weight":"bold"}
+        };
+    }else if(value=="INFO"){
+        return {
+            css:{"color":"green","font-weight":"bold"}
+        };
+    }else{
+        return {
+            css:{"color":"blue","font-weight":"bold"}
+        };
+    }
 }
 
 //根据筛选条件查询日志记录

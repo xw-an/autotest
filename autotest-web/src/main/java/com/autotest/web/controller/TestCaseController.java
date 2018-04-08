@@ -47,6 +47,7 @@ public class TestCaseController {
     @ResponseBody
     public String showTestSteps(@PathVariable String caseId){
         List<TestStepExec> ltStepExec=testStepExecService.selectStepExec(Integer.parseInt(caseId));
+        if(ltStepExec==null||ltStepExec.size()==0) return null;
         List<JSONObject> ljsonObject=new ArrayList<>();
         for(TestStepExec tStepExec:ltStepExec){
             JSONObject jo=new JSONObject();

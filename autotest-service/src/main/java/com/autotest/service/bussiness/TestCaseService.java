@@ -10,6 +10,7 @@ import com.autotest.core.model.TestResult;
 import com.autotest.core.model.TestStepExec;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.apache.log4j.Logger;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -35,7 +36,7 @@ public class TestCaseService implements ITestCaseService {
     private ITestActionService tActionService;
     @Autowired
     private ITestResultService tResultService;
-    private Log logger= LogFactory.getLog(this.getClass());
+    private Logger logger= Logger.getLogger(this.getClass());
 
     @Override
     @Transactional
@@ -111,19 +112,19 @@ public class TestCaseService implements ITestCaseService {
         int resultId=tResult.getId();
         //根据resultId开始记录日志
         MDC.put("resultId",String.valueOf(resultId));
-        logger.info("[用例id:"+caseId+"]:开始运行用例");
+        logger.info("-----[用例id:"+caseId+"]:开始运行用例-----");
 
         boolean resultStatus=false;
         List<TestStepExec> ltStepExec=tStepExecService.selectStepExec(caseId);
         if(ltStepExec==null){
-            logger.info("[用例id:"+caseId+"]:当前用例无可执行步骤");
+            logger.info("-----[用例id:"+caseId+"]:当前用例无可执行步骤-----");
             resultStatus=true;
         }
         else{
             for(TestStepExec tStepExec:ltStepExec){
                 int stepId=tStepExec.getstepId();
                 String stepName=tStepExec.getStepName();
-                logger.info("[用例id:"+caseId+"]:开始执行步骤:"+stepName);
+                logger.info("-----[用例id:"+caseId+"]:开始执行步骤:"+stepName+"-----");
                 String actionType=tStepExec.getActionType();
                 String methodName="exec"+actionType.substring(0,1).toUpperCase()+actionType.substring(1);
                 logger.info("[当前步骤:"+stepId+"]:需要调用的方法名"+methodName);
@@ -135,15 +136,19 @@ public class TestCaseService implements ITestCaseService {
                     resultStatus=(boolean) m.invoke(tActionService,tStepExec.getActionMap());
                 } catch (NoSuchMethodException e) {
                     e.printStackTrace();
+                    logger.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
                     resultStatus=false;
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
+                    logger.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
                     resultStatus=false;
                 } catch (InvocationTargetException e) {
                     e.printStackTrace();
+                    logger.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
                     resultStatus=false;
                 }
-                logger.info("[当前步骤:"+stepId+"]:执行结果"+resultStatus);
+                logger.info("-----[当前步骤:"+stepId+"]:执行结果"+resultStatus+"-----");
+                if(!resultStatus) break;
             }
         }
 
@@ -154,7 +159,7 @@ public class TestCaseService implements ITestCaseService {
             tResult.setResult("Fail");
         }
         tResultService.update(tResult);
-        logger.info("[用例id:"+caseId+"]:用例运行结束");
+        logger.info("-----[用例id:"+caseId+"]:用例运行结束-----");
         return resultStatus;
     }
 }
