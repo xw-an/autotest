@@ -81,6 +81,7 @@
                         <label for="runCaseResult">运行结果</label>
                         <select class="form-control" id="runCaseResult">
                             <option value="All">全部</option>
+                            <option value="Run">Run</option>
                             <option value="Success">Success</option>
                             <option value="Fail">Fail</option>
                         </select>

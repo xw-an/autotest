@@ -7,6 +7,8 @@ import com.autotest.core.model.SystemParameters;
 import com.autotest.core.model.TestAction;
 import com.autotest.core.util.HttpClient;
 import com.autotest.core.util.SystemParametersUtil;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.expression.*;
 import org.springframework.expression.spel.standard.SpelExpressionParser;
@@ -26,6 +28,7 @@ import java.util.regex.Pattern;
 public class TestActionService implements ITestActionService {
     @Autowired
     private ITestAction taDao;
+    private Log logger= LogFactory.getLog(this.getClass());
 
     /**
      * 根据操作类型返回对应的属性

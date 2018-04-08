@@ -22,4 +22,9 @@ public class TestResultService implements ITestResultService{
     public void insert(TestResult tResult) {
         tResultDao.insert(tResult);
     }
+
+    @Override
+    public void update(TestResult tResult) {
+        tResultDao.update(tResult);
+    }
 }

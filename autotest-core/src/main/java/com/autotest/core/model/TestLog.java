@@ -3,14 +3,14 @@ package com.autotest.core.model;
 import java.sql.Timestamp;
 
 public class TestLog {
-
     private int id;
-    private int result_id;
-    private int case_id;
-    private int step_id;
+    private String result_id;
+    private String className;
+    private String methodName;
     private String runParams;
     private String logContent;
     private String remark;
+    private String logLevel;
     private Timestamp dataChange_CreateTime;
     private Timestamp dataChange_LastTime;
 
@@ -18,12 +18,13 @@ public class TestLog {
     public String toString() {
         return "TestLog{" +
                 "id=" + id +
-                ", result_id=" + result_id +
-                ", case_id=" + case_id +
-                ", step_id=" + step_id +
+                ", result_id='" + result_id + '\'' +
+                ", className='" + className + '\'' +
+                ", methodName='" + methodName + '\'' +
                 ", runParams='" + runParams + '\'' +
                 ", logContent='" + logContent + '\'' +
                 ", remark='" + remark + '\'' +
+                ", logLevel='" + logLevel + '\'' +
                 ", dataChange_CreateTime=" + dataChange_CreateTime +
                 ", dataChange_LastTime=" + dataChange_LastTime +
                 '}';
@@ -37,28 +38,28 @@ public class TestLog {
         this.id = id;
     }
 
-    public int getResult_id() {
+    public String getResult_id() {
         return result_id;
     }
 
-    public void setResult_id(int result_id) {
+    public void setResult_id(String result_id) {
         this.result_id = result_id;
     }
 
-    public int getCase_id() {
-        return case_id;
+    public String getClassName() {
+        return className;
     }
 
-    public void setCase_id(int case_id) {
-        this.case_id = case_id;
+    public void setClassName(String className) {
+        this.className = className;
     }
 
-    public int getStep_id() {
-        return step_id;
+    public String getMethodName() {
+        return methodName;
     }
 
-    public void setStep_id(int step_id) {
-        this.step_id = step_id;
+    public void setMethodName(String methodName) {
+        this.methodName = methodName;
     }
 
     public String getRunParams() {
@@ -83,6 +84,14 @@ public class TestLog {
 
     public void setRemark(String remark) {
         this.remark = remark;
+    }
+
+    public String getLogLevel() {
+        return logLevel;
+    }
+
+    public void setLogLevel(String logLevel) {
+        this.logLevel = logLevel;
     }
 
     public Timestamp getDataChange_CreateTime() {

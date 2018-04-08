@@ -81,8 +81,13 @@ function logDetailTable(index, row, $detail) {
         striped: true,
         pageSize: 10,
         columns: [{
-            field: 'step_id',
-            title: '步骤id',
+            field: 'className',
+            title: '类名',
+            valign: 'middle',
+            visible: true
+        },{
+            field: 'methodName',
+            title: '方法名',
             valign: 'middle',
             visible: true
         },{
@@ -93,6 +98,11 @@ function logDetailTable(index, row, $detail) {
         },{
             field: 'logContent',
             title: '日志内容',
+            valign: 'middle',
+            visible: true
+        },{
+            field: 'logLevel',
+            title: '日志级别',
             valign: 'middle',
             visible: true
         },{

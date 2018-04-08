@@ -18,7 +18,7 @@
         userId = #{userId}
         where id = #{id}
     </update>
-    <insert id="insert" parameterType="TestResult">
+    <insert id="insert" parameterType="TestResult" useGeneratedKeys="true" keyColumn="id" keyProperty="id">
         insert into test_result(case_id,result,userId,dataChange_CreateTime,dataChange_LastTime)
         VALUES(#{case_id},#{result},#{userId},now(),now())
     </insert>

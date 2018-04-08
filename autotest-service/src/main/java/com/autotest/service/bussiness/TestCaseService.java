@@ -1,5 +1,6 @@
 package com.autotest.service.bussiness;
 
+import com.alibaba.fastjson.JSON;
 import com.autotest.core.dao.ITestCase;
 import com.autotest.core.dao.ITestExec;
 import com.autotest.core.dao.ITestStep;
@@ -7,6 +8,9 @@ import com.autotest.core.model.FailException;
 import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestResult;
 import com.autotest.core.model.TestStepExec;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -31,6 +35,7 @@ public class TestCaseService implements ITestCaseService {
     private ITestActionService tActionService;
     @Autowired
     private ITestResultService tResultService;
+    private Log logger= LogFactory.getLog(this.getClass());
 
     @Override
     @Transactional
@@ -97,15 +102,31 @@ public class TestCaseService implements ITestCaseService {
      */
     @Override
     public boolean runTestCase(int caseId) {
+        //执行测试用例前，先插入执行结果表状态为"Run"
+        TestResult tResult=new TestResult();
+        tResult.setCase_id(caseId);
+        tResult.setResult("Run");
+        tResult.setUserId("HQ001");//TODO 需要根据session获取
+        tResultService.insert(tResult);
+        int resultId=tResult.getId();
+        //根据resultId开始记录日志
+        MDC.put("resultId",String.valueOf(resultId));
+        logger.info("[用例id:"+caseId+"]:开始运行用例");
+
         boolean resultStatus=false;
         List<TestStepExec> ltStepExec=tStepExecService.selectStepExec(caseId);
         if(ltStepExec==null){
+            logger.info("[用例id:"+caseId+"]:当前用例无可执行步骤");
             resultStatus=true;
         }
         else{
             for(TestStepExec tStepExec:ltStepExec){
+                int stepId=tStepExec.getstepId();
+                String stepName=tStepExec.getStepName();
+                logger.info("[用例id:"+caseId+"]:开始执行步骤:"+stepName);
                 String actionType=tStepExec.getActionType();
                 String methodName="exec"+actionType.substring(0,1).toUpperCase()+actionType.substring(1);
+                logger.info("[当前步骤:"+stepId+"]:需要调用的方法名"+methodName);
                 try {
                 /*
                 根据类型名称反射调用对应类型的方法执行
@@ -122,19 +143,18 @@ public class TestCaseService implements ITestCaseService {
                     e.printStackTrace();
                     resultStatus=false;
                 }
+                logger.info("[当前步骤:"+stepId+"]:执行结果"+resultStatus);
             }
         }
 
         //插入运行结果表
-        TestResult tResult=new TestResult();
-        tResult.setCase_id(caseId);
         if(resultStatus){
             tResult.setResult("Success");
         }else{
             tResult.setResult("Fail");
         }
-        tResult.setUserId("HQ001");//TODO 需要根据session获取
-        tResultService.insert(tResult);
+        tResultService.update(tResult);
+        logger.info("[用例id:"+caseId+"]:用例运行结束");
         return resultStatus;
     }
 }

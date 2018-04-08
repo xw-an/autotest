@@ -12,4 +12,6 @@ public interface ITestResultService {
 
     public void insert(TestResult tResult);
 
+    public void update(TestResult tResult);
+
 }
