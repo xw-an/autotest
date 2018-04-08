@@ -155,12 +155,32 @@ public class TestActionService implements ITestActionService {
         String reqType = (String) callInterfaceMaps.get("reqType");
         String parameterName = (String) callInterfaceMaps.get("parameterName");
         String reqHeader = (String) callInterfaceMaps.get("reqHeader");
+        String reqData=(String)callInterfaceMaps.get("reqData");
+
         if (reqHeader.equals("") || reqHeader == null) {
             callInterfaceMaps.put("reqHeader", new HashMap<>());
         } else {
             Map reqHeaderMap = JSON.parseObject(reqHeader, Map.class);
             callInterfaceMaps.put("reqHeader", reqHeaderMap);
         }
+        /*
+         * 组装reqData，${参数名}从全局变量中寻找对应的值做替换
+         */
+        String pattern = "(\\$\\{)([a-zA-Z0-9]*)(\\})";
+        Pattern p = Pattern.compile(pattern);
+        Matcher m = p.matcher(reqData);
+        while (m.find()) {
+            String tempValue = m.group();
+            String key = tempValue.substring(2, tempValue.indexOf("}"));
+            String value= SystemParameters.getCommParameters().get(key).toString();
+            reqData = reqData.replace(tempValue,value);
+            logger.info("替换请求报文中的变量。"+key+":"+value);
+            logger.info("当前请求报文为："+reqData);
+        }
+        callInterfaceMaps.put("reqData",reqData);
+        /*
+        开始调用接口
+         */
         try {
             String respData = null;
             if (reqType.equalsIgnoreCase("json")) {
@@ -223,18 +243,18 @@ public class TestActionService implements ITestActionService {
                     在全局变量中获取变量的值，然后进行值比较
                      */
                     logger.info("在全局变量中获取变量的值，然后进行值比较");
-                    String key = expectValue.substring(2, expectValue.indexOf("}"));
-                    String expValue = SystemParameters.getCommParameters().get(key).toString();
-                    logger.info("获取变量值,"+key+":"+expValue);
-                    if (expValue == null || expValue.equals("")){
+                    String key = actualValue.substring(2, actualValue.indexOf("}"));
+                    String actValue = SystemParameters.getCommParameters().get(key).toString();
+                    logger.info("获取变量值,"+key+":"+actValue);
+                    if (actValue == null || actValue.equals("")){
                         execResult=false;
                         logger.error("比较结果不一致，全局变量值为空");
-                    }else if (expValue.trim().equalsIgnoreCase(actualValue.trim())) {
+                    }else if (actValue.trim().equalsIgnoreCase(expectValue.trim())) {
                         execResult=true;
-                        logger.info("比较结果一致，实际值:"+actualValue.trim()+"预期值:"+expectValue.trim());
+                        logger.info("比较结果一致，实际值:"+actValue.trim()+"预期值:"+expectValue.trim());
                     }else{
                         execResult=false;
-                        logger.error("比较结果不一致，实际值:"+actualValue.trim()+"预期值:"+expectValue.trim());
+                        logger.error("比较结果不一致，实际值:"+actValue.trim()+"预期值:"+expectValue.trim());
                     }
                     break;
                 case 2:
@@ -250,18 +270,18 @@ public class TestActionService implements ITestActionService {
 
                     context.setVariable("json", com.alibaba.fastjson.JSON.class);//保存json处理类
                     ExpressionParser parser = new SpelExpressionParser();//创建解析器
-                    Expression exp = parser.parseExpression(expectValue);//解析表达式
-                    String expVal = exp.getValue(context, String.class);//根据springel表达式获取结果
-                    logger.info("根据springEl表达式获取到结果:"+expVal);
-                    if (expVal == null || expVal.equals("")){
+                    Expression exp = parser.parseExpression(actualValue);//解析表达式
+                    String actVal = exp.getValue(context, String.class);//根据springel表达式获取结果
+                    logger.info("根据springEl表达式获取到结果:"+actVal);
+                    if (actVal == null || actVal.equals("")){
                         execResult=false;
                         logger.error("比较失败:根据springEL表达式没有获取到结果");
-                    }else if (expVal.trim().equalsIgnoreCase(actualValue.trim())) {
+                    }else if (actVal.trim().equalsIgnoreCase(expectValue.trim())) {
                         execResult=true;
-                        logger.info("比较结果一致，实际值:"+actualValue.trim()+"预期值:"+expVal.trim());
+                        logger.info("比较结果一致，实际值:"+actVal.trim()+"预期值:"+actVal.trim());
                     }else{
                         execResult=false;
-                        logger.error("比较结果不一致，实际值:"+actualValue.trim()+"预期值:"+expVal.trim());
+                        logger.error("比较结果不一致，实际值:"+actVal.trim()+"预期值:"+actVal.trim());
                     }
                     break;
                 default:
