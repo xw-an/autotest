@@ -171,9 +171,10 @@ function clearActionMap(type){
     }else if(type=="update"){
         var len=$('#updateStepForm .form-group').length;
         $('#updateStepForm')[0].reset();
-        for(var i=2;i<len;i++){
+        /*for(var i=2;i<len;i++){
             $("#updateStepForm .form-group:eq("+i+")").remove();
-        }
+        }*/
+        $('.updateActionParams').remove();
         $('#updateStepModal').modal('hide');
     }
 }
@@ -221,7 +222,6 @@ function addStep(index){
 
 // 删除当前步骤
 function deleteCaseStep(row,index) {
-    //$("#caseStepsTable tr[data-index='"+index+"']").remove();
     $('#caseStepsTable').bootstrapTable('remove', {
         field: 'stepId',
         values: [row.stepId]
@@ -243,13 +243,24 @@ function updateActionMap(){
         success:function(data){
             for (var key in data)
             {
-                //界面展示填写项
-                var name=data[key]
-                var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
-                    "<label>"+name+"</label>\n" +
-                    "<input type=\"text\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" placeholder=\""+key+"\">\n" +
-                    "</div>"
-                $('#updateStepForm .form-group').last().append(html);
+                /*界面动态展示填写项
+                需要根据类型判断是用input还是textarea
+                 */
+                var keyNames=['sql','reqData','reqHeader'];//这三种类型需要用textarea，其他用input
+                if(keyNames.indexOf(key)!=-1){
+                    var name=data[key];
+                    var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
+                        "<label>"+name+"</label>\n" +
+                        "<textarea class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" placeholder=\""+key+"\"></textarea>\n" +
+                        "</div>"
+                }else{
+                    var name=data[key];
+                    var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
+                        "<label>"+name+"</label>\n" +
+                        "<input type=\"text\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" placeholder=\""+key+"\">\n" +
+                        "</div>"
+                }
+                $('#updateStepForm .form-group').last().after(html);
             }
         },
         error:function(){
@@ -274,13 +285,25 @@ function updateCaseStep(row,index){
         success:function(data){
             for (var key in data)
             {
+                /*界面动态展示填写项
+                需要根据类型判断是用input还是textarea
+                 */
+                var keyNames=['sql','reqData','reqHeader'];//这三种类型需要用textarea，其他用input
+                if(keyNames.indexOf(key)!=-1){
+                    var name=data[key];
+                    var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
+                        "<label>"+name+"</label>\n" +
+                        "<textarea class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\">"+jsonActionMap[key]+"</textarea>\n" +
+                        "</div>"
+                }else{
+                    var name=data[key];
+                    var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
+                        "<label>"+name+"</label>\n" +
+                        "<input type=\"text\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" value=\""+jsonActionMap[key]+"\">\n" +
+                        "</div>"
+                }
                 //界面展示填写项
-                var name=data[key]
-                var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
-                    "<label>"+name+"</label>\n" +
-                    "<input type=\"text\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" value=\""+jsonActionMap[key]+"\">\n" +
-                    "</div>"
-                $('#updateStepForm .form-group').last().append(html);
+                $('#updateStepForm .form-group').last().after(html);
             }
         },
         error:function(){
@@ -302,8 +325,16 @@ function updateStep(row,index){
     var len=$('#updateStepForm .form-group').length;
     var updateActionMap={};
     for(var i=2;i<len;i++){
-        var paramName=$("#updateStepForm .form-group:eq("+i+") input").attr("id");
-        var paramValue=$("#updateStepForm .form-group:eq("+i+") input").val();
+        /*
+        需要判断是获取input还是textarea的值
+         */
+        if($("#updateStepForm .form-group:eq("+i+") input").length>0){
+            var paramName=$("#updateStepForm .form-group:eq("+i+") input").attr("id");
+            var paramValue=$("#updateStepForm .form-group:eq("+i+") input").val();
+        }else{
+            var paramName=$("#updateStepForm .form-group:eq("+i+") textarea").attr("id");
+            var paramValue=$("#updateStepForm .form-group:eq("+i+") textarea").val();
+        }
         paramName=paramName.substring("update".length);
         updateActionMap[paramName] = paramValue;
     }
