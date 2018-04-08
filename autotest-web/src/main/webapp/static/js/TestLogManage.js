@@ -17,36 +17,42 @@ $(function(){
             title: 'id',
             align: 'center',
             valign: 'middle',
+            width:'5%',
             visible: true
         },{
             field: 'caseId',
             title: '用例Id',
             align: 'center',
             valign: 'middle',
+            width:'5%',
             visible: true
         },{
             field: 'userId',
             title: '用户Id',
             align: 'center',
             valign: 'middle',
+            width:'10%',
             visible: true
         },{
             field: 'testScenariosName',
             title: '用例名',
             align: 'center',
             valign: 'middle',
+            width:'35%',
             visible: true
         },{
             field: 'testScenariosType',
             title: '用例类型',
             align: 'center',
             valign: 'middle',
+            width:'35%',
             visible: true
         },{
             field: 'result',
             title: '运行结果',
             align: 'center',
             valign: 'middle',
+            width:'10%',
             visible: true,
             cellStyle:resultCellStyle
         }]
@@ -84,44 +90,44 @@ function logDetailTable(index, row, $detail) {
             field: 'className',
             title: '类名',
             valign: 'middle',
-            width:'5%',
+            width:'15%',
             visible: true
         },{
             field: 'methodName',
             title: '方法名',
             valign: 'middle',
-            width:'5%',
+            width:'10%',
             visible: true
         },{
             field: 'runParams',
             title: '运行参数',
             valign: 'middle',
-            width:'35%',
+            width:'30%',
             visible: true
         },{
             field: 'logContent',
             title: '日志内容',
             valign: 'middle',
-            width:'35%',
+            width:'25%',
             visible: true
         },{
             field: 'logLevel',
             title: '日志级别',
             valign: 'middle',
-            visible: true,
             width:'5%',
+            visible: true,
             cellStyle:LevelCellStyle
         },{
             field: 'remark',
             title: '备注信息',
             valign: 'middle',
-            width:'10%',
+            width:'5%',
             visible: true
         },{
             field: 'dataChange_CreateTime',
             title: '创建时间',
             valign: 'middle',
-            width:'5%',
+            width:'10%',
             visible: true
         }],
     });

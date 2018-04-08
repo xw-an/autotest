@@ -60,7 +60,8 @@ public class TestActionService implements ITestActionService {
     @Transactional
     public boolean execDb(Map<String, Object> dbMaps) {
         String runParams=JSON.toJSONString(dbMaps);
-        //MDC.put("runParams",runParams);//TODO 这个字段插入数据库时出错，需要解决该问题
+        runParams=runParams.replace("'","\\\'");
+        MDC.put("runParams",runParams);//TODO 这个字段插入数据库时出错，需要解决该问题
         boolean execResult=false;
         String url = dbMaps.get("conn").toString();
         String username = dbMaps.get("username").toString();
@@ -278,10 +279,10 @@ public class TestActionService implements ITestActionService {
                         logger.error("比较失败:根据springEL表达式没有获取到结果");
                     }else if (actVal.trim().equalsIgnoreCase(expectValue.trim())) {
                         execResult=true;
-                        logger.info("比较结果一致，实际值:"+actVal.trim()+"预期值:"+actVal.trim());
+                        logger.info("比较结果一致，实际值:"+actVal.trim()+"预期值:"+expectValue.trim());
                     }else{
                         execResult=false;
-                        logger.error("比较结果不一致，实际值:"+actVal.trim()+"预期值:"+actVal.trim());
+                        logger.error("比较结果不一致，实际值:"+actVal.trim()+"预期值:"+expectValue.trim());
                     }
                     break;
                 default:

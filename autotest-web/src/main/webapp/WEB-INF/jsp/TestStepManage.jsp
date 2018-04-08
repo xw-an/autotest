@@ -37,7 +37,7 @@
         <div class="row">
             <!-- 表格展示所有测试用例 -->
             <div class="container-fluid" style="margin-top: 50px;">
-                <table id="caseStepsTable" style="table-layout:fixed;word-break:break-all; word-wrap:break-all;"></table>
+                <table id="caseStepsTable" style="table-layout:fixed;word-break:break-all;"></table>
             </div>
         </div>
     </div>

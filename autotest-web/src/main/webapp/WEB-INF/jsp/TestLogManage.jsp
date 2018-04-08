@@ -100,7 +100,7 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-12">
-                <table id="testLogTable"></table>
+                <table id="testLogTable" style="table-layout:fixed;word-break:break-all;"></table>
             </div>
         </div>
     </div>
