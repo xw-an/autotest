@@ -20,7 +20,7 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="btn-group" role="group">
+            <div class="btn-group" role="group" style="padding-left: 15px;">
                 <button type="button" class="btn btn-primary" onclick="showAddCase()">新增用例</button>
                 <div class="btn-group" role="group">
                     <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
