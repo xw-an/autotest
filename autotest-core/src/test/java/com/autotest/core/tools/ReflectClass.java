@@ -25,7 +25,7 @@ public class ReflectClass {
 	//账号
 	private static String user = "root";
 	//密码
-	private static String password = "";
+	private static String password = "881113";
 	private String driverClassName = "com.mysql.jdbc.Driver";
 	
 	private Vector<String> vector = new Vector<String>();
@@ -38,7 +38,7 @@ public class ReflectClass {
 	//sqlserver jdbc的java包驱动字符串
 	private String driverClassName = "com.microsoft.sqlserver.jdbc.SQLServerDriver";
 */	//数据库中的表名
-	String table = "testcase_exec";
+	String table = "test_user";
 	//输出文件目录
 	String outPath="src/main/java/com/autotest/orderautotest/model/"+table+".java";
 	//数据库的列名称

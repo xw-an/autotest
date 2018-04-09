@@ -303,6 +303,13 @@ function runCaseByType(type){
     }
     else{
         for(var i=0;i<checks.length;i++){
+            //更新界面状态为Run
+            $('#testCaseTable').bootstrapTable("updateCell", {
+                index : checks[i].rowIndexId,
+                field : 'testResult',
+                value : "<a href='#'><span class='label label-warning' style='font-size:14px'>Run</span></a>"
+            });
+
             var paramObj={caseId:checks[i].id,rowId:checks[i].rowIndexId}
             paramsArray.push(paramObj);
         }

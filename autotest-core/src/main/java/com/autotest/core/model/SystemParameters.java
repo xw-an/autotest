@@ -4,7 +4,7 @@ import java.util.Map;
 
 public class SystemParameters {
     private static ThreadLocal<Map<String,Object>> commParameters=new ThreadLocal<Map<String,Object>>();
-    private static ThreadLocal<String> loginUserId=new ThreadLocal<>();
+    private static ThreadLocal<TestUser> loginUser=new ThreadLocal<>();
 
     public static Map<String, Object> getCommParameters() {
         return commParameters.get();
@@ -18,15 +18,15 @@ public class SystemParameters {
         commParameters.remove();
     }
 
-    public static void setLoginUserId(String _loginUserId) {
-        loginUserId.set(_loginUserId);
+    public static void setLoginUser(TestUser _loginUser) {
+        loginUser.set(_loginUser);
     }
 
-    public static String getLoginUserId(){
-        return loginUserId.get();
+    public static TestUser getLoginUser(){
+        return loginUser.get();
     }
 
-    public static void removeLoginUserId(){
-        loginUserId.remove();
+    public static void removeLoginUser(){
+        loginUser.remove();
     }
 }
