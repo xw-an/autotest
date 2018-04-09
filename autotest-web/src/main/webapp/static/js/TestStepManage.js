@@ -140,7 +140,7 @@ function addActionMap(){
                     var name=data[key]
                     var html="<div class=\"form-group actionParams\" id=\""+key+"Group\">\n" +
                         "<label>"+name+"</label>\n" +
-                        "<textarea class=\"form-control\" name=\""+key+"\" id=\""+key+"\" placeholder=\""+key+"\"></textarea>\n" +
+                        "<textarea rows=\"5\" class=\"form-control\" name=\""+key+"\" id=\""+key+"\" placeholder=\""+key+"\"></textarea>\n" +
                         "</div>"
                 }else{
                     var name=data[key]
@@ -251,7 +251,7 @@ function updateActionMap(){
                     var name=data[key];
                     var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
                         "<label>"+name+"</label>\n" +
-                        "<textarea class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" placeholder=\""+key+"\"></textarea>\n" +
+                        "<textarea rows=\"5\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\" placeholder=\""+key+"\"></textarea>\n" +
                         "</div>"
                 }else{
                     var name=data[key];
@@ -293,7 +293,7 @@ function updateCaseStep(row,index){
                     var name=data[key];
                     var html="<div class=\"form-group updateActionParams\" id=\"update"+key+"Group\">\n" +
                         "<label>"+name+"</label>\n" +
-                        "<textarea class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\">"+jsonActionMap[key]+"</textarea>\n" +
+                        "<textarea rows=\"5\" class=\"form-control\" name=\"update"+key+"\" id=\"update"+key+"\">"+jsonActionMap[key]+"</textarea>\n" +
                         "</div>"
                 }else{
                     var name=data[key];
