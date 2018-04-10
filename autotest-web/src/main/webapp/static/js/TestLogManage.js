@@ -28,7 +28,7 @@ $(function(){
             visible: true
         },{
             field: 'userId',
-            title: '用户Id',
+            title: '执行人Id',
             align: 'center',
             valign: 'middle',
             width:'10%',

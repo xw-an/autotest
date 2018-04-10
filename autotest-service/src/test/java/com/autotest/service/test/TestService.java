@@ -199,7 +199,7 @@ public class TestService {
         tCase.setRemark("123");
         tCase.setUserId("HQ");
         tCaseService.addCase(tCase);*/
-        System.out.println(tCaseService.runTestCase(1));
+        System.out.println(tCaseService.runTestCase(1,"123"));
     }
 
     @Test

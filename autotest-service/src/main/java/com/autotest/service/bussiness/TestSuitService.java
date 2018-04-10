@@ -27,7 +27,7 @@ public class TestSuitService implements ITestSuitService {
         Map<Integer, Boolean> tSuitResult=new HashMap<>();
         List<Integer> caseIds=tSuit.getCaseIds();
         for(Integer caseId:caseIds){
-           boolean result=tCaseService.runTestCase(caseId);
+           boolean result=tCaseService.runTestCase(caseId,tSuit.getUserId());
            tSuitResult.put(caseId,result);
         }
         return tSuitResult;
@@ -51,7 +51,7 @@ public class TestSuitService implements ITestSuitService {
             futures.add(pool.submit(new Runnable() {
                 @Override
                 public void run() {
-                    boolean result=tCaseService.runTestCase(caseId);
+                    boolean result=tCaseService.runTestCase(caseId,tSuit.getUserId());
                     tSuitResult.put(caseId,result);
                 }
             }));

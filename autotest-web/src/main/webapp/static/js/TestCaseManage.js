@@ -150,7 +150,7 @@ function addCase(){
         testScenariosType:$('#testScenariosType').val(),
         testContent:$('#testContent').val(),
         remark:$('#remark').val(),
-        userId:$('#userId').val()
+        userId:$('#userId').val() //不需要了直接读session了
     };
     $.ajax({
         url:"./TestCaseManage/addCase",

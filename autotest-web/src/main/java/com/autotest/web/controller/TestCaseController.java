@@ -5,12 +5,16 @@ import com.alibaba.fastjson.JSONObject;
 import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestStepExec;
 import com.autotest.core.model.TestSuit;
+import com.autotest.core.model.TestUser;
 import com.autotest.service.bussiness.ITestCaseService;
 import com.autotest.service.bussiness.ITestStepExecService;
 import com.autotest.service.bussiness.ITestSuitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,6 +32,8 @@ public class TestCaseController {
     private ITestStepExecService testStepExecService;
     @Autowired
     private ITestSuitService testSuitService;
+    @Autowired
+    private HttpServletRequest request;
 
     @RequestMapping
     public String showTestCaseManage(){
@@ -65,6 +71,9 @@ public class TestCaseController {
     @ResponseBody
     public Map<String,String> addTestCase(@RequestBody TestCase testCase){
         Map<String,String> msg=new HashMap<>();
+        HttpSession session=request.getSession();
+        TestUser testUser=(TestUser)session.getAttribute("loginUser");
+        testCase.setUserId(testUser.getUserId());//获取session中登陆用户
         boolean execResult=testCaseService.addCase(testCase);
         if(execResult) {
             msg.put("msg", "添加成功");
@@ -118,6 +127,10 @@ public class TestCaseController {
             lcaseIds.add(caseId);
         }
         TestSuit testSuit=new TestSuit();
+        //获取session
+        HttpSession session=request.getSession();
+        TestUser loginUser=(TestUser) session.getAttribute("loginUser");//获取登陆用户的userId
+        testSuit.setUserId(loginUser.getUserId());
         testSuit.setCaseIds(lcaseIds);
         switch(type){
             case 1://单线程运行

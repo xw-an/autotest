@@ -11,7 +11,7 @@ public interface ITestCaseService {
     public boolean deleteCase(int caseId);
     public TestCase selectCase(int caseId);
     public List<TestCase> listCase(Map<String,Object> filterMaps);
-    public boolean runTestCase(int caseId);
+    public boolean runTestCase(int caseId,String userId);
 
 
 }

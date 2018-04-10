@@ -12,12 +12,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
 @Controller
 @RequestMapping("/TestUser")
 public class TestUserController {
 
     @Autowired
     private ITestUserService testUserService;
+    @Autowired
+    private HttpServletRequest request;
 
     @RequestMapping("/login")
     public String showLogin(){
@@ -29,12 +34,15 @@ public class TestUserController {
         boolean result=false;
         try {
             TestUser loginUser=testUserService.selectUser(name,password);
-            if(loginUser!=null&&!loginUser.equals("")){ result=true;}
+            if(loginUser!=null&&!loginUser.equals("")){
+                HttpSession session=request.getSession();
+                session.setAttribute("loginUser",loginUser);//登陆信息保存在session中
+                result=true;
+            }
         } catch (Exception e) {
             model.addAttribute("errorMsg",e.getMessage());
         }
         if(result){
-            //TODO 需要将当前用户保存在session中
             //登陆成功跳转到用例管理界面
             return "redirect:/TestCaseManage";
         }else{
@@ -42,29 +50,4 @@ public class TestUserController {
             return "login";
         }
     }
-
-
-   /* @RequestMapping("/loginUser")
-    @ResponseBody
-    public String loginUser(@RequestBody JSONObject user){
-        JSONObject jsonResult=new JSONObject();
-        String name=user.getString("name");
-        String password=user.getString("password");
-        try {
-            TestUser loginUser=testUserService.selectUser(name,password);
-            if(loginUser!=null&&!loginUser.equals("")){
-                SystemParameters.setLoginUser(loginUser);//将当前用户保存到threadlocal中
-                jsonResult.put("result",true);
-            }else{
-                jsonResult.put("result",false);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-            jsonResult.put("result",false);
-            jsonResult.put("message",e.getMessage());
-        }
-        return JSONObject.toJSONString(jsonResult);
-    }*/
-
-
 }

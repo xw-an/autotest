@@ -102,12 +102,15 @@ public class TestCaseService implements ITestCaseService {
      * @return 返回运行结果
      */
     @Override
-    public boolean runTestCase(int caseId) {
+    public boolean runTestCase(int caseId,String userId) {
         //执行测试用例前，先插入执行结果表状态为"Run"
         TestResult tResult=new TestResult();
         tResult.setCase_id(caseId);
         tResult.setResult("Run");
-        tResult.setUserId("HQ001");//TODO 需要根据session获取
+        if(userId==null||userId.equals("")){
+            userId="test";
+        }
+        tResult.setUserId(userId);
         tResultService.insert(tResult);
         int resultId=tResult.getId();
         //根据resultId开始记录日志
