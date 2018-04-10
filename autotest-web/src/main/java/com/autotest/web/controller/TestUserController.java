@@ -50,4 +50,11 @@ public class TestUserController {
             return "login";
         }
     }
+
+    @RequestMapping("/logout")
+    public String logoutUser(){
+        HttpSession session=request.getSession();
+        session.removeAttribute("loginUser");
+        return "redirect:/TestUser/login";
+    }
 }

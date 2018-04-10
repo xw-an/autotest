@@ -100,6 +100,9 @@ public class TestCaseController {
     @ResponseBody
     public Map<String,String> updateTestCase(@RequestBody TestCase tCase){
         Map<String,String> msg=new HashMap<>();
+        HttpSession session=request.getSession();
+        TestUser testUser=(TestUser)session.getAttribute("loginUser");
+        tCase.setUserId(testUser.getUserId());
         boolean execResult=testCaseService.updateCase(tCase);
         if(execResult) {
             msg.put("msg","更新成功");

@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.autotest.core.model.TestUser" %><%--
   Created by IntelliJ IDEA.
   User: xuewei
   Date: 2018/3/30
@@ -62,10 +62,10 @@
                             <label>备注</label>
                             <input type="text" class="form-control" name="remark" id="remark" placeholder="备注">
                         </div>
-                        <div class="form-group" id="userIdGroup">
+                        <%--<div class="form-group" id="userIdGroup">
                             <label>创建人</label>
                             <input type="text" class="form-control" name="userId" id="userId" placeholder="创建人">
-                        </div>
+                        </div>--%>
                     </form>
                 </div>
                 <div class="modal-footer">

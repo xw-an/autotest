@@ -1,4 +1,4 @@
-<%--
+<%@ page import="com.autotest.core.model.TestUser" %><%--
   Created by IntelliJ IDEA.
   User: xuewei
   Date: 2018/4/2
@@ -8,6 +8,8 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     String basePath=request.getContextPath();
+    TestUser loginUser=(TestUser) session.getAttribute("loginUser");
+    String username=loginUser.getUsername();
 %>
 <html>
 <head>
@@ -36,6 +38,7 @@
                     <li><a href="<%=basePath%>/TestStepManage"><span class="glyphicon glyphicon-th-list"></span>&nbsp;&nbsp;配置步骤</a></li>
                     <li><a href="<%=basePath%>/TestLogManage"><span class="glyphicon glyphicon-list-alt"></span>&nbsp;&nbsp;执行日志</a></li>
                     <li><a href="<%=basePath%>/TestToolManage"><span class="glyphicon glyphicon-cog"></span>&nbsp;&nbsp;工具集</a></li>
+                    <li><a href="<%=basePath%>/TestUser/logout"><span class="glyphicon glyphicon-user"></span>&nbsp;&nbsp;【<%=username%>】&nbsp;&nbsp;退出</a></li>
                 </ul>
             </div>
         </div>
