@@ -29,4 +29,13 @@
         <property name="suffix" value=".jsp"/>
         <property name="viewClass" value="org.springframework.web.servlet.view.JstlView"/>
     </bean>
+
+    <!--配置自定义拦截器-->
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**" />
+            <mvc:exclude-mapping path="/TestUser/*" />
+            <bean class="com.autotest.web.controller.LoginInterceptor" />
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
