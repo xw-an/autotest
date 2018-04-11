@@ -50,7 +50,9 @@
                         <label for="runUserId">执行人</label>
                         <select class="form-control" id="runUserId">
                             <option value="All">全部</option>
-                            <option value="HQ001">薛伟</option>
+                            <option value="xw">薛伟</option>
+                            <option value="admin">管理员</option>
+                            <option value="test">匿名</option>
                         </select>
                     </div>
                 </div>

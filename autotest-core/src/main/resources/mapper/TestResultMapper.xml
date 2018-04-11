@@ -33,7 +33,7 @@
                 and result=#{result}
             </if>
             <if test="userId!=null and userId!=''">
-                and userId=#{userId}
+                and tr.userId=#{userId}
             </if>
             <if test="runStartTime!=null and runStartTime!=''">
                 and tr.dataChange_CreateTime&gt;=#{runStartTime}
