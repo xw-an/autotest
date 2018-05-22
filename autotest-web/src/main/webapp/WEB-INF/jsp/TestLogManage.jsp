@@ -21,7 +21,7 @@
 
     <!--日志筛选框-->
     <div class="container">
-        <form id="testLogForm">
+        <%--<form id="testLogForm">--%>
             <div class="row">
                 <div class="col-xs-3  col-xs-offset-2">
                     <div class="form-group">
@@ -95,7 +95,7 @@
                     <button type="button" class="btn btn-default" onclick="searchLog()">查询</button>
                 </div>
             </div>
-        </form>
+        <%--</form>--%>
     </div>
 
     <!-- 日志内容表格 -->

@@ -24,24 +24,28 @@
                 <!-- 创建菜单树 -->
                 <div class="col-xs-12">
                     <ul id="systemSetting" class="nav nav-list" style="height: 0px;">
-                        <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/packageTool')"><i class="glyphicon glyphicon-th"></i>&nbsp;测试工具1</a></li>
-                        <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/packageTool')"><i class="glyphicon glyphicon-th"></i>&nbsp;测试工具2</a></li>
+                        <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/timeTool','时间转换工具')"><i class="glyphicon glyphicon-time"></i>&nbsp;&nbsp;时间转换工具</a></li>
+                        <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/timeTool','')"><i class="glyphicon glyphicon-th"></i>&nbsp;&nbsp;测试工具2</a></li>
                     </ul>
                 </div>
             </div>
             <div class="col-xs-10 column">
                 <div class="breadcrumbs" id="breadcrumbs">
                     <!-- 面包屑导航 -->
-                    <ul class="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li><a href="<%=basePath%>/TestToolManage">工具集</a></li>
+                        <li class="active"></li>
+                    </ol>
+                    <%--<ul class="breadcrumb">
                         <li>
                             <a href="<%=basePath%>/TestToolManage">工具集</a>
                         </li>
                         <li class="active" id="dashboard"></li>
-                    </ul>
+                    </ul>--%>
                 </div>
                 <!-- 内容展示页 -->
                 <div>
-                    <iframe id="iframe-page-content" src="<%=basePath%>/TestToolManage/packageTool" width="100%"  frameborder="no" border="0" marginwidth="0"
+                    <iframe id="iframe-page-content" src="<%=basePath%>/TestToolManage/timeTool" width="100%"  frameborder="no" border="0" marginwidth="0"
                             marginheight=" 0" scrolling="no" allowtransparency="yes"></iframe>
                 </div>
             </div>
@@ -53,10 +57,10 @@
             var height=document.documentElement.clientHeight;
             document.getElementById('iframe-page-content').style.height=height+'px';
         });
-        var menuClick = function(menuUrl) {
+        var menuClick = function(menuUrl,breadcrumb) {
+            $('li.active').html(breadcrumb);
             $('#iframe-page-content').attr('src',menuUrl);
         };
-
     </script>
 </body>
 </html>
