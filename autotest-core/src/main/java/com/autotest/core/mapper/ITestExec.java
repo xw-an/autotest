@@ -1,4 +1,4 @@
-package com.autotest.core.dao;
+package com.autotest.core.mapper;
 
 import com.autotest.core.annotation.DataSource;
 import com.autotest.core.model.TestExec;

@@ -1,17 +1,24 @@
-package com.autotest.core.aspect;
+package com.autotest.core.util;
 
 import com.autotest.core.annotation.DataSource;
-import com.autotest.core.model.DynamicDataSourceHolder;
+import com.autotest.core.config.DynamicDataSourceHolder;
 import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.reflect.MethodSignature;
+import org.springframework.stereotype.Repository;
+
 import java.lang.reflect.Method;
 
+@Repository
+@Aspect
 public class DataSourceAspect {
 
     /**
      *拦截目标方法，获取由@DataSource指定的数据源标识，设置到线程存储中以便切换数据源
      * @param point
      */
+    @Before("execution(* com.autotest.core.mapper.*.*(..))")
     public void intercept(JoinPoint point){
         Class<?> target = point.getTarget().getClass();
         MethodSignature signature = (MethodSignature) point.getSignature();

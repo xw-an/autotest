@@ -36,12 +36,6 @@
                         <li><a href="<%=basePath%>/TestToolManage">工具集</a></li>
                         <li class="active"></li>
                     </ol>
-                    <%--<ul class="breadcrumb">
-                        <li>
-                            <a href="<%=basePath%>/TestToolManage">工具集</a>
-                        </li>
-                        <li class="active" id="dashboard"></li>
-                    </ul>--%>
                 </div>
                 <!-- 内容展示页 -->
                 <div>

@@ -56,7 +56,7 @@ public class TestStepController {
                 List<JSONObject> lsteps=new ArrayList<>();
                 for(TestStepExec tStepExec:ltStepExec){
                     JSONObject jo=new JSONObject();
-                    jo.put("stepId",String.valueOf(tStepExec.getstepId()));
+                    jo.put("stepId",String.valueOf(tStepExec.getStepId()));
                     jo.put("stepName",tStepExec.getStepName());
                     jo.put("actionType",tStepExec.getActionType());
                     jo.put("actionMap", JSON.toJSONString(tStepExec.getActionMap()));

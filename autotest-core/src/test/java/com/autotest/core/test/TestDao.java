@@ -1,9 +1,9 @@
 package com.autotest.core.test;
 
-import com.autotest.core.dao.ITestAction;
-import com.autotest.core.dao.ITestCase;
-import com.autotest.core.dao.ITestExec;
-import com.autotest.core.dao.ITestStep;
+import com.autotest.core.mapper.ITestAction;
+import com.autotest.core.mapper.ITestCase;
+import com.autotest.core.mapper.ITestExec;
+import com.autotest.core.mapper.ITestStep;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

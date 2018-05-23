@@ -1,13 +1,15 @@
 package com.autotest.service.bussiness;
 
-import com.autotest.core.dao.ITestResult;
+import com.autotest.core.mapper.ITestResult;
 import com.autotest.core.model.TestResult;
 import com.autotest.core.model.TestResultCase;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
+@Log4j
 @Service
 public class TestResultService implements ITestResultService{
     @Autowired

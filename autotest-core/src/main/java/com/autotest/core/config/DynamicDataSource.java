@@ -1,6 +1,5 @@
-package com.autotest.core.util;
+package com.autotest.core.config;
 
-import com.autotest.core.model.DynamicDataSourceHolder;
 import org.springframework.jdbc.datasource.lookup.AbstractRoutingDataSource;
 
 public class DynamicDataSource extends AbstractRoutingDataSource {

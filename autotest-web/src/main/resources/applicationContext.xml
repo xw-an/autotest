@@ -27,7 +27,7 @@
         <property name="password" value="${password_Mysql_autotest}" />
     </bean>
 
-    <bean id="dynamicDataSource" class="com.autotest.core.util.DynamicDataSource">
+    <bean id="dynamicDataSource" class="com.autotest.core.config.DynamicDataSource">
         <property name="targetDataSources">
             <map key-type="java.lang.String">
                 <!-- 指定lookupKey和与之对应的数据源 -->
@@ -47,45 +47,32 @@
 
     <!-- 扫描mybatis的接口 mapper interface -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.autotest.core.dao"/>
+        <property name="basePackage" value="com.autotest.core.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
     </bean>
 
-    <!-- mybatis spring sqlSessionTemplate,使用时直接让spring注入即可 -->
+    <!--&lt;!&ndash; mybatis spring sqlSessionTemplate,使用时直接让spring注入即可 &ndash;&gt;
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg index="0" ref="sqlSessionFactory"></constructor-arg>
-    </bean>
+    </bean>-->
+
+    <aop:aspectj-autoproxy/>
+    <!--<aop:aspectj-autoproxy proxy-target-class="true"/>-->
+<!--    <bean id="dataSourceAspect" class="com.autotest.core.util.DataSourceAspect" />
+    <aop:config>
+        <aop:aspect ref="dataSourceAspect">
+            &lt;!&ndash; 拦截所有dao方法,把数据源注入 &ndash;&gt;
+            <aop:pointcut id="dataSourcePointcut" expression="execution(* com.autotest.core.mapper.*.*(..))"/>
+            <aop:before pointcut-ref="dataSourcePointcut" method="intercept"/>
+        </aop:aspect>
+    </aop:config>-->
+
 
     <!--     配置Spring的事务处理
        创建事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dynamicDataSource" />
     </bean>
-
-    <bean id="dataSourceAspect" class="com.autotest.core.aspect.DataSourceAspect" />
-    <aop:aspectj-autoproxy proxy-target-class="true"/>
-    <aop:config>
-        <aop:aspect ref="dataSourceAspect">
-            <!-- 拦截所有dao方法,把数据源注入 -->
-            <aop:pointcut id="dataSourcePointcut" expression="execution(* com.autotest.core.dao.*.*(..))"/>
-            <aop:before pointcut-ref="dataSourcePointcut" method="intercept"/>
-        </aop:aspect>
-    </aop:config>
-
-    <aop:config>
-        <aop:pointcut id="allMethods" expression="execution(* com.autotest.core.dao.*.*(..))" />
-        <aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods"/>
-    </aop:config>
-    <!--
-      配置AOP，Spring是通过AOP来进行事务管理的
-      <aop:config>
-          设置pointCut表示哪些方法要加入事务处理
-          <aop:pointcut expression="execution(* com.autotest.core.dao.*.*(..))"
-          id="allMethods"/>
-          通过advisor来确定具体要加入事务控制的方法
-          <aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods"/>
-      </aop:config> -->
-
 
     <!-- 配置哪些方法要加入事务控制 -->
     <tx:advice id="txAdvice" transaction-manager="transactionManager">
@@ -99,4 +86,10 @@
             <tx:method name="save*" propagation="REQUIRED"  rollback-for="Exception"/>
         </tx:attributes>
     </tx:advice>
+    <aop:config>
+        <!--设置pointCut表示哪些方法要加入事务处理-->
+        <aop:pointcut id="allMethods" expression="execution(* com.autotest.core.mapper.*.*(..))" />
+        <!--通过advisor来确定具体要加入事务控制的方法-->
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="allMethods"/>
+    </aop:config>
 </beans>

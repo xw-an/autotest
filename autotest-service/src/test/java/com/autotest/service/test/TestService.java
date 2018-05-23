@@ -2,8 +2,7 @@ package com.autotest.service.test;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.autotest.core.model.SystemParameters;
-import com.autotest.core.model.TestCase;
+import com.autotest.core.config.SystemParameters;
 import com.autotest.core.model.TestSuit;
 import com.autotest.core.util.HttpClient;
 import com.autotest.core.util.SystemParametersUtil;

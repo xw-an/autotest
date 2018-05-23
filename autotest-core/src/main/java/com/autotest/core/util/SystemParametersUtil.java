@@ -1,6 +1,6 @@
 package com.autotest.core.util;
 
-import com.autotest.core.model.SystemParameters;
+import com.autotest.core.config.SystemParameters;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -3,7 +3,7 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.autotest.core.dao.ITestLog">
+<mapper namespace="com.autotest.core.mapper.ITestLog">
     <insert id="insert" parameterType="TestLog" useGeneratedKeys="true" keyProperty="id" keyColumn="id">
       insert into test_log(result_id,className,methodName,runParams,logContent,remark,logLevel,dataChange_CreateTime,dataChange_LastTime)
       values(#{result_id},#{className},#{methodName},#{runParams},#{logContent},#{remark},#{logLevel},now(),now())

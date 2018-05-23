@@ -1,10 +1,9 @@
-package com.autotest.core.dao;
+package com.autotest.core.mapper;
 
 import com.autotest.core.annotation.DataSource;
 import com.autotest.core.model.TestStep;
 
 import java.util.List;
-import java.util.Map;
 
 public interface ITestStep {
 

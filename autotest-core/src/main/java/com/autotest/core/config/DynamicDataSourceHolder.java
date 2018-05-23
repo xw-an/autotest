@@ -1,4 +1,4 @@
-package com.autotest.core.model;
+package com.autotest.core.config;
 
 public class DynamicDataSourceHolder {
 	 public static final ThreadLocal<String> holder = new ThreadLocal<String>();  

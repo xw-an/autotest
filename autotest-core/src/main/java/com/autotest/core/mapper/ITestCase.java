@@ -1,8 +1,7 @@
-package com.autotest.core.dao;
+package com.autotest.core.mapper;
 
 import com.autotest.core.annotation.DataSource;
 import com.autotest.core.model.TestCase;
-import org.springframework.stereotype.Repository;
 
 import java.util.List;
 import java.util.Map;

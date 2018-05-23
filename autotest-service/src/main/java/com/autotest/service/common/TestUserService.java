@@ -1,6 +1,6 @@
 package com.autotest.service.common;
 
-import com.autotest.core.dao.ITestUser;
+import com.autotest.core.mapper.ITestUser;
 import com.autotest.core.model.FailException;
 import com.autotest.core.model.TestUser;
 import org.springframework.beans.factory.annotation.Autowired;

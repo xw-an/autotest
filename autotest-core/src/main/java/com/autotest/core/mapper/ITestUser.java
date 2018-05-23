@@ -1,4 +1,4 @@
-package com.autotest.core.dao;
+package com.autotest.core.mapper;
 
 import com.autotest.core.model.TestUser;
 import java.util.List;

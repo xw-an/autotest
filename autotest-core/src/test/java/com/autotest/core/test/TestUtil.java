@@ -1,6 +1,6 @@
 package com.autotest.core.test;
 
-import com.autotest.core.dao.ITestResult;
+import com.autotest.core.mapper.ITestResult;
 import com.autotest.core.util.HttpClient;
 import org.junit.Test;
 import org.junit.runner.RunWith;

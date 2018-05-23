@@ -1,10 +1,11 @@
 package com.autotest.service.bussiness;
 
-import com.autotest.core.dao.ITestExec;
-import com.autotest.core.dao.ITestStep;
+import com.autotest.core.mapper.ITestExec;
+import com.autotest.core.mapper.ITestStep;
 import com.autotest.core.model.TestExec;
 import com.autotest.core.model.TestStep;
 import com.autotest.core.model.TestStepExec;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,6 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+@Log4j
 @Service
 public class TestStepExecService implements ITestStepExecService {
     @Autowired
@@ -108,7 +110,7 @@ public class TestStepExecService implements ITestStepExecService {
             }
 
             TestStepExec tStepExec=new TestStepExec();
-            tStepExec.setstepId(ts.getId());
+            tStepExec.setStepId(ts.getId());
             tStepExec.setActionType(ts.getAction_type());
             tStepExec.setStepName(ts.getStep_name());
             tStepExec.setActionMap(actionMaps);//添加当前步骤操作类型的key,value集合

@@ -1,7 +1,7 @@
 package com.autotest.service.bussiness;
 
-import com.autotest.core.model.SystemParameters;
 import com.autotest.core.model.TestSuit;
+import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,6 +11,7 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
+@Log4j
 @Service
 public class TestSuitService implements ITestSuitService {
 

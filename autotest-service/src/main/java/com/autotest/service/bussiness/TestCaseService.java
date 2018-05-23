@@ -1,23 +1,23 @@
 package com.autotest.service.bussiness;
 
-import com.autotest.core.dao.ITestCase;
-import com.autotest.core.dao.ITestExec;
-import com.autotest.core.dao.ITestStep;
+import com.autotest.core.mapper.ITestCase;
+import com.autotest.core.mapper.ITestExec;
+import com.autotest.core.mapper.ITestStep;
 import com.autotest.core.model.FailException;
 import com.autotest.core.model.TestCase;
 import com.autotest.core.model.TestResult;
 import com.autotest.core.model.TestStepExec;
-import org.apache.log4j.Logger;
+import lombok.extern.log4j.Log4j;
 import org.slf4j.MDC;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.List;
 import java.util.Map;
 
+@Log4j
 @Service
 public class TestCaseService implements ITestCaseService {
 
@@ -33,7 +33,6 @@ public class TestCaseService implements ITestCaseService {
     private ITestActionService tActionService;
     @Autowired
     private ITestResultService tResultService;
-    private Logger logger= Logger.getLogger(this.getClass());
 
     @Override
     @Transactional
@@ -112,22 +111,22 @@ public class TestCaseService implements ITestCaseService {
         int resultId=tResult.getId();
         //根据resultId开始记录日志
         MDC.put("resultId",String.valueOf(resultId));
-        logger.info("-----[用例id:"+caseId+"]:开始运行用例-----");
+        log.info("-----[用例id:"+caseId+"]:开始运行用例-----");
 
         boolean resultStatus=false;
         List<TestStepExec> ltStepExec=tStepExecService.selectStepExec(caseId);
         if(ltStepExec==null){
-            logger.info("-----[用例id:"+caseId+"]:当前用例无可执行步骤-----");
+            log.info("-----[用例id:"+caseId+"]:当前用例无可执行步骤-----");
             resultStatus=true;
         }
         else{
             for(TestStepExec tStepExec:ltStepExec){
-                int stepId=tStepExec.getstepId();
+                int stepId=tStepExec.getStepId();
                 String stepName=tStepExec.getStepName();
-                logger.info("-----[用例id:"+caseId+"]:开始执行步骤:"+stepName+"-----");
+                log.info("-----[用例id:"+caseId+"]:开始执行步骤:"+stepName+"-----");
                 String actionType=tStepExec.getActionType();
                 String methodName="exec"+actionType.substring(0,1).toUpperCase()+actionType.substring(1);
-                logger.info("[当前步骤:"+stepId+"]:需要调用的方法名"+methodName);
+                log.info("[当前步骤:"+stepId+"]:需要调用的方法名"+methodName);
                 try {
                 /*
                 根据类型名称反射调用对应类型的方法执行
@@ -136,18 +135,18 @@ public class TestCaseService implements ITestCaseService {
                     resultStatus=(boolean) m.invoke(tActionService,tStepExec.getActionMap());
                 } catch (NoSuchMethodException e) {
                     e.printStackTrace();
-                    logger.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
+                    log.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
                     resultStatus=false;
                 } catch (IllegalAccessException e) {
                     e.printStackTrace();
-                    logger.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
+                    log.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
                     resultStatus=false;
                 } catch (InvocationTargetException e) {
                     e.printStackTrace();
-                    logger.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
+                    log.error("[当前步骤:"+stepId+"]:执行异常"+e.getMessage());
                     resultStatus=false;
                 }
-                logger.info("-----[当前步骤:"+stepId+"]:执行结果"+resultStatus+"-----");
+                log.info("-----[当前步骤:"+stepId+"]:执行结果"+resultStatus+"-----");
                 if(!resultStatus) break;
             }
         }
@@ -159,7 +158,7 @@ public class TestCaseService implements ITestCaseService {
             tResult.setResult("Fail");
         }
         tResultService.update(tResult);
-        logger.info("-----[用例id:"+caseId+"]:用例运行结束-----");
+        log.info("-----[用例id:"+caseId+"]:用例运行结束-----");
         return resultStatus;
     }
 }

@@ -1,4 +1,6 @@
-package com.autotest.core.model;
+package com.autotest.core.config;
+
+import com.autotest.core.model.TestUser;
 
 import java.util.Map;
 
