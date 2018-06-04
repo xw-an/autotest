@@ -1,5 +1,6 @@
 com\autotest\core\model\TestStepExec.class
 com\autotest\core\model\TestStep.class
+com\autotest\core\model\BfProductDetail.class
 com\autotest\core\model\TestResultCase.class
 com\autotest\core\config\DynamicDataSource.class
 com\autotest\core\mapper\ITestUser.class
@@ -16,6 +17,7 @@ com\autotest\core\config\DynamicDataSourceHolder.class
 com\autotest\core\model\TestExec.class
 com\autotest\core\model\TestResult.class
 com\autotest\core\util\DataSourceAspect.class
+com\autotest\core\mapper\IBfProductDetail.class
 com\autotest\core\annotation\DataSource.class
 com\autotest\core\mapper\ITestLog.class
 com\autotest\core\mapper\ITestStep.class

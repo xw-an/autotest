@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+         http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+         http://www.springframework.org/schema/context
+         http://www.springframework.org/schema/context/spring-context-4.3.xsd
+         http://www.springframework.org/schema/aop
+         http://www.springframework.org/schema/aop/spring-aop-4.3.xsd
+         http://www.springframework.org/schema/tx
+         http://www.springframework.org/schema/tx/spring-tx-4.3.xsd">
+    <context:annotation-config/>
+    <context:component-scan base-package="com"/>
+
+    <!--引入配置文件-->
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="location" value="classpath:jdbc.properties" />
+    </bean>
+
+    <!--配置mysql数据源sit的huaxia_crm库-->
+    <bean id="dataSource_crm_sit" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driver}" />
+        <property name="url" value="${url_crm_sit}" />
+        <property name="username" value="${username_crm_sit}" />
+        <property name="password" value="${password_crm_sit}" />
+    </bean>
+
+    <!--配置mysql数据源sit的fundsystem库-->
+    <bean id="dataSource_fundsystem_sit" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driver}" />
+        <property name="url" value="${url_fundsystem_sit}" />
+        <property name="username" value="${username_fundsystem_sit}" />
+        <property name="password" value="${password_fundsystem_sit}" />
+    </bean>
+
+    <!--配置mysql数据源库autotest库-->
+    <bean id="dataSource_autotest" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="${driver}" />
+        <property name="url" value="${url_autotest}" />
+        <property name="username" value="${username_autotest}" />
+        <property name="password" value="${password_autotest}" />
+    </bean>
+
+    <bean id="dynamicDataSource" class="com.autotest.core.config.DynamicDataSource">
+        <property name="targetDataSources">
+            <map key-type="java.lang.String">
+                <!-- 指定lookupKey和与之对应的数据源 -->
+                <entry key="crm_sit" value-ref="dataSource_crm_sit"></entry>
+                <entry key="fundsystem_sit" value-ref="dataSource_fundsystem_sit"></entry>
+                <entry key="autotest" value-ref="dataSource_autotest"></entry>
+            </map>
+        </property>
+        <!-- 这里可以指定默认的数据源 -->
+        <property name="defaultTargetDataSource" ref="dataSource_autotest" />
+    </bean>
+
+    <!-- spring和MyBatis整合 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dynamicDataSource" />
+        <property name="configLocation"  value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath*:mapper/*Mapper.xml" />
+    </bean>
+
+    <!-- 扫描mybatis的接口 mapper interface -->
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+        <property name="basePackage" value="com.autotest.core.mapper"/>
+        <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory"/>
+    </bean>
+
+    <!--配置Spring的事务处理创建事务管理器 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dynamicDataSource" />
+    </bean>
+
+    <!--开启aop的@annotation方式-->
+    <aop:aspectj-autoproxy/>
+</beans>

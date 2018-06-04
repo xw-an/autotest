@@ -1,8 +1,10 @@
 package com.autotest.core.mapper;
 
+import com.autotest.core.annotation.DataSource;
 import com.autotest.core.model.TestUser;
 import java.util.List;
 
+@DataSource("autotest")
 public interface ITestUser {
     public void insert(TestUser tUser);
     public void delete(String userId);

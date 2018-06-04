@@ -20,6 +20,8 @@ D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\config\DynamicDataS
 D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\model\TestSuit.java
 D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\model\TestLog.java
 D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\mapper\ITestStep.java
+D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\mapper\IBfProductDetail.java
+D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\model\BfProductDetail.java
 D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\annotation\DataSource.java
 D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\util\DataSourceAspect.java
 D:\xw\autotest\autotest-core\src\main\java\com\autotest\core\mapper\ITestAction.java

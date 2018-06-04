@@ -25,7 +25,7 @@
                 <div class="col-xs-12">
                     <ul id="systemSetting" class="nav nav-list" style="height: 0px;">
                         <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/timeTool','时间转换工具')"><i class="glyphicon glyphicon-time"></i>&nbsp;&nbsp;时间转换工具</a></li>
-                        <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/timeTool','')"><i class="glyphicon glyphicon-th"></i>&nbsp;&nbsp;测试工具2</a></li>
+                        <li><a href="#" onclick="menuClick('<%=basePath%>/TestToolManage/profitsPlanTool','计算收益工具')"><i class="glyphicon glyphicon-th"></i>&nbsp;&nbsp;计算收益工具</a></li>
                     </ul>
                 </div>
             </div>

@@ -1,9 +1,6 @@
 package com.autotest.core.test;
 
-import com.autotest.core.mapper.ITestAction;
-import com.autotest.core.mapper.ITestCase;
-import com.autotest.core.mapper.ITestExec;
-import com.autotest.core.mapper.ITestStep;
+import com.autotest.core.mapper.*;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +19,8 @@ public class TestDao {
     private ITestAction tadao;
     @Autowired
     private ITestExec tedao;
+    @Autowired
+    private IBfProductDetail iBfProductDetail;
 
     @Test
     public void testcase(){
@@ -43,5 +42,9 @@ public class TestDao {
         System.out.println(tedao.select(1));
     }
 
+    @Test
+    public void testprodDetail(){
+        System.out.println(iBfProductDetail.select("444"));
+    }
 
 }

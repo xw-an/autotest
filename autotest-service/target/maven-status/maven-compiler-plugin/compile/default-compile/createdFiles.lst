@@ -5,7 +5,9 @@ com\autotest\service\bussiness\TestActionService.class
 com\autotest\service\bussiness\TestLogService.class
 com\autotest\service\bussiness\TestSuitService$1.class
 com\autotest\service\common\TestUserService.class
+com\autotest\service\tools\TestToolService.class
 com\autotest\service\bussiness\TestResultService.class
+com\autotest\service\tools\ITestToolService.class
 com\autotest\service\bussiness\ITestSuitService.class
 com\autotest\service\bussiness\ITestLogService.class
 com\autotest\service\bussiness\TestStepExecService.class

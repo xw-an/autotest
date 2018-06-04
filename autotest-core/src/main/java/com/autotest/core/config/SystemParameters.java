@@ -7,6 +7,7 @@ import java.util.Map;
 public class SystemParameters {
     private static ThreadLocal<Map<String,Object>> commParameters=new ThreadLocal<Map<String,Object>>();
     private static ThreadLocal<TestUser> loginUser=new ThreadLocal<>();
+    public static String environment="sit"; //设置默认数据源的环境
 
     public static Map<String, Object> getCommParameters() {
         return commParameters.get();

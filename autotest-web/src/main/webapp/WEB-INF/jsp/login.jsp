@@ -26,11 +26,11 @@
 
             <label for="password" class="sr-only">Password</label>
             <input type="password" name="password" id="password" class="form-control" placeholder="Password" required>
-<%--            <div class="checkbox">
+            <div class="checkbox">
                 <label>
-                    <input type="checkbox" value="remember-me"> Remember me
+                    <input type="checkbox" name="isSaveCookie" checked="true"> Remember me for a week
                 </label>
-            </div>--%>
+            </div>
             <em style="color:red;">${errorMsg}</em>
             <button class="btn btn-lg btn-primary btn-block" type="submit">login</button>
         </form>

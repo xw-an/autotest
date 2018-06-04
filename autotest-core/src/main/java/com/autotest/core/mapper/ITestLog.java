@@ -1,9 +1,11 @@
 package com.autotest.core.mapper;
 
+import com.autotest.core.annotation.DataSource;
 import com.autotest.core.model.TestLog;
 import java.util.List;
 import java.util.Map;
 
+@DataSource("autotest")
 public interface ITestLog {
 
     public void insert(TestLog tLog);

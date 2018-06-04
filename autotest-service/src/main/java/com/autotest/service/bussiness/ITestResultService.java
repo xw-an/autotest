@@ -9,9 +9,7 @@ import java.util.Map;
 public interface ITestResultService {
 
     public List<TestResultCase> listResult(Map<String,Object> params);
-
     public void insert(TestResult tResult);
-
     public void update(TestResult tResult);
 
 }

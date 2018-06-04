@@ -2,6 +2,7 @@ D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\Tes
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\TestCaseService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\TestSuitService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\ITestSuitService.java
+D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\tools\TestToolService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\ITestCaseService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\common\ITestUserService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\TestActionService.java
@@ -10,5 +11,6 @@ D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\ITe
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\ITestActionService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\TestLogService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\TestResultService.java
+D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\tools\ITestToolService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\bussiness\ITestLogService.java
 D:\xw\autotest\autotest-service\src\main\java\com\autotest\service\common\TestUserService.java
