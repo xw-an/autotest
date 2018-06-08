@@ -22,7 +22,7 @@ public class TestToolService implements ITestToolService {
 
         BfProductDetail prodDetail=iBfProductDetail.select(productCode);
         if(prodDetail==null) throw new RuntimeException("产品code不存在");
-        BigDecimal interestRate=new BigDecimal(String.valueOf(prodDetail.getInterestRate()));//利息利率
+        BigDecimal interestRate=prodDetail.getInterestRate();//利息利率
         String refundWay=prodDetail.getRefundWay();
         int term=prodDetail.getTerm();
         result.append("----------产品信息----------\n");
@@ -30,9 +30,9 @@ public class TestToolService implements ITestToolService {
         result.append("产品期数："+term+"\n");
 
         BigDecimal interestAmount=price.multiply(interestRate).divide(new BigDecimal("12"),4,BigDecimal.ROUND_HALF_UP);//每个月利息金额4位小数
-        BigDecimal activityAmount=price.multiply(activityRate).divide(new BigDecimal("12"),4,BigDecimal.ROUND_HALF_UP);//每个月活动金额4位小数
-        BigDecimal totalInterestAmount=price.multiply(interestRate).divide(new BigDecimal("12"),20,BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal(term)).setScale(4,BigDecimal.ROUND_HALF_UP);//总利息收益4位小数
-        BigDecimal totalActivityAmount=price.multiply(activityRate).divide(new BigDecimal("12"),20,BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal(term)).setScale(4,BigDecimal.ROUND_HALF_UP);//总活动收益4位小数;
+        BigDecimal activityAmount=price.multiply(activityRate).divide(new BigDecimal("12"),2,BigDecimal.ROUND_HALF_UP);//每个月活动金额2位小数
+        BigDecimal totalInterestAmount=price.multiply(interestRate).divide(new BigDecimal("12"),20,BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal(term)).setScale(2,BigDecimal.ROUND_HALF_UP);//总利息收益4位小数
+        BigDecimal totalActivityAmount=price.multiply(activityRate).divide(new BigDecimal("12"),20,BigDecimal.ROUND_HALF_UP).multiply(new BigDecimal(term)).setScale(2,BigDecimal.ROUND_HALF_UP);//总活动收益4位小数;
 
         if(refundWay.equals("3")){
             //一次性还本付息
